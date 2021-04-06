@@ -16,4 +16,68 @@ body {
   margin-right: auto;
   margin-top: 70px;
 }
+
+.main .header {
+  position: relative;
+  width: 100%;
+  height: 266px;
+  overflow: hidden;
+  display: flex;
+}
+
+.main .header-background {
+  position: absolute;
+  z-index: 1;
+  top: -152%;
+  width: 100%;
+}
+
+.main .header-background-nen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  opacity: 0.6;
+  background: #14242d;
+}
+
+.main .header-first-avatar {
+  position: relative;
+  z-index: 3;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 112px;
+  margin-top: 42px;
+}
+
+.main .header-first-avatar img {
+  width: 100%;
+}
+
+.main .header-first-information-under-avatar {
+  position: relative;
+  z-index: 3;
+  color: #ccd1d9;
+  margin-top: 15px;
+}
+
+.main .header-first-information-under-avatar h4 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  left: 114px;
+  position: relative;
+}
+
+.main .header-first-information-under-avatar p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 11.3px;
+  position: relative;
+  left: 123px;
+  margin-top: 3px;
+}
 /*# sourceMappingURL=style.css.map */
