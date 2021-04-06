@@ -1,0 +1,26 @@
+// import
+@import "configuration";
+
+// Toàn cục
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+// body
+body {
+  background-color: $background-color-body;
+}
+
+// CV
+.main {
+  background-color: $background-color-main;
+  width: 85vw;
+  height: 1000px;
+  margin: {
+    left: auto;
+    right: auto;
+    top: 70px;
+  }
+}
