@@ -5,7 +5,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: $font-family-all;
 }
 
 // body
@@ -13,37 +12,43 @@ body {
   background-color: $background-color-body;
 }
 
+// box shadow cho main
+.box-shadow-for-main {
+  @include custom-main(absolute, 1, 855px, 70px, -42.5vw);
+  box-shadow: 20px 100px 20px 5px $color-box-shadow-main;
+  left: 50%;
+}
+
 // CV
 .main {
+  @include custom-main(relative, 2, 1000px, 70px, auto);
   background-color: $background-color-main;
-  width: 85vw;
-  height: 1000px;
+  border-radius: 3px;
   margin: {
-    left: auto;
     right: auto;
-    top: 70px;
+    bottom: 80px;
   }
 
   // Header của cv
   .header {
+    @include custom-width-height(100%, 266px);
     position: relative;
-    width: 100%;
-    height: 266px;
     overflow: hidden;
     display: flex;
+    border: {
+      top-left-radius: 3px;
+      top-right-radius: 3px;
+    }
 
     // Hình nền của header
     &-background {
-      position: absolute;
-      z-index: 1;
+      @include custom-position(absolute, 1);
       top: -152%;
       width: 100%;
     }
     &-background-nen {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 2;
+      @include custom-position(absolute, 2);
+      @include custom-width-height(100%, 100%);
       opacity: 0.6;
       background: $background-color-header;
     }
@@ -51,12 +56,11 @@ body {
 
     // Div avatar và tên
     &-first {
+      @include custom-position(relative, 3);
+
       // avatar của header
       &-avatar {
-        position: relative;
-        z-index: 3;
-        width: 145px;
-        height: 145px;
+        @include custom-width-height(145px, 145px);
         border-radius: 50%;
         overflow: hidden;
         margin: {
@@ -71,26 +75,17 @@ body {
 
       // Thông tin dưới avatar của header
       &-information-under-avatar {
-        position: relative;
-        z-index: 3;
-        color: #ccd1d9;
+        color: $color-header;
         margin-top: 15px;
+        font-family: "Raleway", sans-serif;
         h4 {
-          font: {
-            family: "Raleway", sans-serif;
-            weight: 400;
-            size: 18px;
-          }
+          @include custom-font-weight-size(400, 18px);
           letter-spacing: 0.6px;
           left: 114px;
           position: relative;
         }
         p {
-          font: {
-            family: "Raleway", sans-serif;
-            weight: 400;
-            size: 11.3px;
-          }
+          @include custom-font-weight-size(400, 11.3px);
           position: relative;
           left: 123px;
           margin-top: 3px;
@@ -99,6 +94,121 @@ body {
       // Kết thúc thông tin dưới avatar của header
     }
     // Kết thúc div avatar và tên
+
+    // Div liên hệ trong header
+    &-second {
+      @include custom-position(relative, 3);
+      display: flex;
+      flex-direction: column;
+      color: $color-header;
+      font-family: "Raleway", sans-serif;
+      margin-left: 100px;
+      h4 {
+        @include custom-font-weight-size(400, 24px);
+        letter-spacing: 1.5px;
+        margin-top: 58px;
+      }
+      p {
+        letter-spacing: 1px;
+        font-size: 15px;
+        margin-top: 22px;
+      }
+      p:nth-child(2) {
+        margin-top: 27px;
+      }
+      p:nth-child(3) {
+        @include custom-font-weight-size(500, 16px);
+        letter-spacing: 1.5px;
+        transform: scaleY(1.1) translateY(-2px);
+      }
+      p:nth-child(4) {
+        font-size: 14px;
+      }
+    }
+    // Kết thúc Div liên hệ trong header
+
+    // Div mạng xã hội trong header
+    &-thrice {
+      @include custom-position(relative, 3);
+      display: flex;
+      flex-direction: column;
+      color: $color-header;
+      margin-left: 105px;
+      font-family: "Raleway", sans-serif;
+      h4 {
+        @include custom-font-weight-size(400, 24px);
+        text-align: center;
+        letter-spacing: 1.5px;
+        margin: {
+          top: 58px;
+          bottom: 4px;
+        }
+      }
+      &-icons {
+        display: flex;
+        flex-direction: row;
+        margin-top: 22px;
+        width: 158px;
+        justify-content: space-between;
+        a {
+          @include custom-width-height(34px, 34px);
+          color: #fefefe;
+          text-decoration: none;
+          border: 2px solid #fefefe;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 23px;
+        }
+      }
+    }
+    // Kết thúc Div mạng xã hội trong header
+
+    // Div kết thúc trong header
+    &-four {
+      @include custom-position(relative, 3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+      color: $color-header;
+      font-family: "Raleway", sans-serif;
+      h4 {
+        @include custom-font-weight-size(400, 24px);
+        text-align: center;
+        letter-spacing: 1.5px;
+        margin: {
+          top: 58px;
+          bottom: 4px;
+        }
+      }
+      a {
+        color: #fefefe;
+        font-size: 85px;
+        margin-top: 12px;
+      }
+      &-arrow-down {
+        @include custom-width-height(15px, 15px);
+        border-radius: 1px;
+        background-color: #fefefe;
+        transform: rotate(45deg);
+        margin-top: -19px;
+      }
+      p {
+        @include custom-font-weight-size(600, 14px);
+        text-transform: uppercase;
+        transform: scaleY(0.9);
+        margin-top: 2px;
+      }
+      p:nth-child(4) {
+        margin-top: 20px;
+      }
+    }
+    // Kết thúc Div kết thúc trong header
   }
   // Kết thúc header của cv
 }
