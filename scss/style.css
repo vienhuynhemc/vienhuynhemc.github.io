@@ -1,3 +1,15 @@
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
 * {
   margin: 0;
   padding: 0;
@@ -10,31 +22,32 @@ body {
 .box-shadow-for-main {
   position: absolute;
   z-index: 1;
-  height: 855px;
+  width: 85vw;
   margin-top: 70px;
   margin-left: -42.5vw;
-  width: 85vw;
   box-shadow: 20px 100px 20px 5px #929090;
+  height: 855px;
   left: 50%;
 }
 
 .main {
   position: relative;
   z-index: 2;
-  height: 1000px;
+  width: 85vw;
   margin-top: 70px;
   margin-left: auto;
-  width: 85vw;
+  box-shadow: inset -4px 0px 20px #bdbdbd91;
   background-color: white;
   border-radius: 3px;
+  padding-bottom: 48px;
   margin-right: auto;
   margin-bottom: 80px;
 }
 
 .main .header {
-  position: relative;
   width: 100%;
   height: 266px;
+  position: relative;
   overflow: hidden;
   display: flex;
   border-top-left-radius: 3px;
@@ -78,10 +91,10 @@ body {
 .main .header-first-information-under-avatar {
   color: #ccd1d9;
   margin-top: 15px;
+  font-family: "Raleway", sans-serif;
 }
 
 .main .header-first-information-under-avatar h4 {
-  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 0.6px;
@@ -90,7 +103,6 @@ body {
 }
 
 .main .header-first-information-under-avatar p {
-  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 11.3px;
   position: relative;
@@ -113,6 +125,7 @@ body {
   font-size: 24px;
   letter-spacing: 1.5px;
   margin-top: 58px;
+  margin-bottom: 0px;
 }
 
 .main .header-second p {
@@ -126,9 +139,9 @@ body {
 }
 
 .main .header-second p:nth-child(3) {
-  letter-spacing: 1.5px;
   font-weight: 500;
   font-size: 16px;
+  letter-spacing: 1.5px;
   transform: scaleY(1.1) translateY(-2px);
 }
 
@@ -149,10 +162,10 @@ body {
 .main .header-thrice h4 {
   font-weight: 400;
   font-size: 24px;
-  text-align: center;
   letter-spacing: 1.5px;
   margin-top: 58px;
   margin-bottom: 4px;
+  text-align: center;
 }
 
 .main .header-thrice-icons {
@@ -164,11 +177,11 @@ body {
 }
 
 .main .header-thrice-icons a {
+  width: 34px;
+  height: 34px;
   color: #fefefe;
   text-decoration: none;
   border: 2px solid #fefefe;
-  width: 34px;
-  height: 34px;
   border-radius: 3px;
   display: flex;
   justify-content: center;
@@ -182,8 +195,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   color: #ccd1d9;
   font-family: "Raleway", sans-serif;
 }
@@ -191,10 +203,10 @@ body {
 .main .header-four h4 {
   font-weight: 400;
   font-size: 24px;
-  text-align: center;
   letter-spacing: 1.5px;
   margin-top: 58px;
   margin-bottom: 4px;
+  text-align: center;
 }
 
 .main .header-four a {
@@ -205,22 +217,83 @@ body {
 
 .main .header-four-arrow-down {
   width: 15px;
-  border-radius: 1px;
   height: 15px;
+  border-radius: 1px;
   background-color: #fefefe;
   transform: rotate(45deg);
   margin-top: -19px;
 }
 
 .main .header-four p {
-  text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
+  text-transform: uppercase;
   transform: scaleY(0.9);
   margin-top: 2px;
+  letter-spacing: 0.5px;
 }
 
 .main .header-four p:nth-child(4) {
   margin-top: 20px;
+}
+
+.main .content {
+  padding-top: 13px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 53px;
+  margin-right: 53px;
+  margin-top: 14px;
+}
+
+.main .content-left {
+  font-weight: 600;
+  font-size: 12.7px;
+  width: 41.2%;
+  position: relative;
+  border-radius: 3px;
+  border: 2px solid #f0f0f0;
+  font-family: "Raleway", sans-serif;
+  color: #aaaaac;
+  line-height: 21px;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-bottom: 38px;
+}
+
+.main .content-left-icon {
+  width: 27px;
+  height: 10px;
+  position: absolute;
+  left: -17px;
+  background: white;
+  top: 50px;
+  border: 2px solid #bc8544;
+}
+
+.main .content-left img {
+  width: 390px;
+  margin-left: -4px;
+  margin-top: 14px;
+}
+
+.main .content-left p:nth-child(3) {
+  transform: translateY(-7px);
+}
+
+.main .content-left p:nth-child(4) {
+  margin-top: 5px;
+}
+
+.main .content-right {
+  width: 41.2%;
+  position: relative;
+  border-radius: 3px;
+  border: 2px solid #f0f0f0;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-bottom: 38px;
 }
 /*# sourceMappingURL=style.css.map */

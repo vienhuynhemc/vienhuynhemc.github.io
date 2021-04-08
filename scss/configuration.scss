@@ -8,34 +8,7 @@ $background-color-header: #14242d;
 $color-header: #ccd1d9;
 // Màu của box-shadow main
 $color-box-shadow-main: #929090;
-
-//////////// MIXIN /////////////////
-// Mixin điều chỉnh tham số cho main
-@mixin custom-main($position, $z-index, $height, $margin-top, $margin-left) {
-  @include custom-position($position, $z-index);
-  @include cusFtom-width-height($height, 85vw);
-  margin: {
-    top: $margin-top;
-    left: $margin-left;
-  }
-}
-
-// Mixin điều chỉnh postion
-@mixin custom-position($position, $z-index) {
-  position: $position;
-  z-index: $z-index;
-}
-
-// Mixin điều chỉnh width + height
-@mixin custom-width-height($width, $height) {
-  width: $width;
-  height: $height;
-}
-
-// Mixin điều chỉnh font-weight + font-size
-@mixin custom-font-weight-size($weight, $size) {
-  font: {
-    weight: $weight;
-    size: $size;
-  }
-}
+// Màu của box-shadown inline main
+$color-box-shadow-inline-main: #bdbdbd91;;
+// Màu của các icon trên header
+$color-icon-header: #fefefe;
