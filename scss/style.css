@@ -27,7 +27,7 @@ body {
   margin-left: -580.5px;
   box-shadow: 20px 100px 20px 5px #929090;
   height: 1700px;
-  left: 50%;
+  left: 674px;
 }
 
 .box-shadow-left {
@@ -71,13 +71,12 @@ body {
   z-index: 2;
   width: 1161px;
   margin-top: 70px;
-  margin-left: auto;
+  margin-left: 94px;
   background-color: white;
   box-shadow: inset -4px 0px 20px #bdbdbd91;
   border-radius: 3px;
   padding-bottom: 48px;
   overflow: hidden;
-  margin-right: auto;
   margin-bottom: 150px;
 }
 

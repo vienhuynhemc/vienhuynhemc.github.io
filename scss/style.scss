@@ -20,7 +20,7 @@ body {
   @include custom-main(absolute, 1, 70px, -580.5px);
   box-shadow: 20px 100px 20px 5px $color-box-shadow-main;
   height: 1700px;
-  left: 50%;
+  left: 674px;
 }
 .box-shadow-left {
   position: absolute;
@@ -58,14 +58,13 @@ body {
 
 // CV
 .main {
-  @include custom-main(relative, 2, 70px, auto);
+  @include custom-main(relative, 2, 70px, 94px);
   background-color: $background-color-main;
   box-shadow: inset -4px 0px 20px #bdbdbd91;
   border-radius: 3px;
   padding-bottom: 48px;
   overflow: hidden;
   margin: {
-    right: auto;
     bottom: 150px;
   }
 
