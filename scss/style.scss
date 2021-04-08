@@ -17,22 +17,68 @@ body {
 
 // box shadow cho main
 .box-shadow-for-main {
-  @include custom-main(absolute, 1, 70px, -42.5vw);
+  @include custom-main(absolute, 1, 70px, -580.5px);
   box-shadow: 20px 100px 20px 5px $color-box-shadow-main;
-  height: 855px;
+  height: 1700px;
   left: 50%;
+}
+.box-shadow-left {
+  position: absolute;
+  z-index: 1;
+  width: 634px;
+  height: 151px;
+  background: #949292;
+  top: 1786px;
+  left: 631px;
+  box-shadow: -11px 21px 17px 20px #939191;
+  transform: rotate(2deg);
+}
+.box-shadow-right {
+  position: absolute;
+  z-index: 1;
+  width: 602px;
+  height: 151px;
+  background: #949292;
+  top: 1798px;
+  left: 176px;
+  box-shadow: -7px 20px 30px 20px #939191;
+  transform: rotate(-9deg);
+}
+.box-shadow-center {
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: #9e9c9c;
+  top: 1925px;
+  left: 1215px;
+  box-shadow: 5px 4px 30px 20px #9e9c9c;
+  transform: rotate(0deg);
 }
 
 // CV
 .main {
   @include custom-main(relative, 2, 70px, auto);
-  box-shadow: inset -4px 0px 20px $color-box-shadow-inline-main;
   background-color: $background-color-main;
+  box-shadow: inset -4px 0px 20px #bdbdbd91;
   border-radius: 3px;
   padding-bottom: 48px;
+  overflow: hidden;
   margin: {
     right: auto;
-    bottom: 80px;
+    bottom: 150px;
+  }
+
+  &-box-shadow {
+    position: absolute;
+    width: 500px;
+    height: 849px;
+    z-index: 999;
+    border-radius: 50%;
+    background: #c7c7c730;
+    top: 1101px;
+    left: -130px;
+    box-shadow: 0 0 5071px 52px #c1c1c14a;
   }
 
   // Header của cv
@@ -93,7 +139,7 @@ body {
         p {
           @include custom-font-weight-size(400, 11.3px);
           position: relative;
-          left: 123px;
+          left: 136px;
           margin-top: 3px;
         }
       }
@@ -204,9 +250,9 @@ body {
   .content {
     padding-top: 13px;
     background-color: $background-color-main;
-    position: relative;
     display: flex;
     justify-content: space-between;
+    position: relative;
     margin: {
       left: 53px;
       right: 53px;
@@ -218,37 +264,111 @@ body {
       @include custom-font-weight-size(600, 12.7px);
       width: 41.2%;
       position: relative;
-      border-radius: 3px;
-      border: 2px solid #f0f0f0;
-      font-family: "Raleway", sans-serif;
-      color: #aaaaac;
-      line-height: 21px;
-      padding: {
-        left: 42px;
-        right: 42px;
-        bottom: 38px;
-      }
-      &-icon {
-        @include custom-width-height(27px, 10px);
-        position: absolute;
-        left: -17px;
-        background: white;
-        top: 50px;
-        border: 2px solid #bc8544;
-      }
-      img {
-        width: 390px;
-        margin: {
-          left: -4px;
-          top: 14px;
+
+      // div intro của div left
+      &-intro {
+        border-radius: 3px;
+        border: 2px solid #f0f0f0;
+        font-family: "Raleway", sans-serif;
+        width: 100%;
+        padding: {
+          left: 42px;
+          right: 42px;
+          bottom: 38px;
+        }
+        color: #aaaaac;
+        &-icon {
+          @include custom-width-height(27px, 10px);
+          position: absolute;
+          left: -17px;
+          background: white;
+          top: 56px;
+          border: 2px solid #bc8544;
+        }
+        img {
+          width: 390px;
+          margin: {
+            left: -4px;
+            top: 20px;
+          }
+        }
+        p {
+          line-height: 21px;
+          letter-spacing: 1px;
+          font-size: 11.5px;
+        }
+        p:nth-child(3) {
+          margin-top: 8px;
+        }
+        p:nth-child(4) {
+          margin-top: 14px;
         }
       }
-      p:nth-child(3) {
-        transform: translateY(-7px);
+      // Kết thúc div intro của div left
+
+      // Div specialties
+      &-specialties {
+        margin-top: 9px;
+        border-radius: 3px;
+        border: 2px solid #f0f0f0;
+        font-family: "Raleway", sans-serif;
+        width: 100%;
+        padding: {
+          left: 42px;
+          right: 42px;
+          bottom: 38px;
+        }
+        h4 {
+          @include custom-font-weight-size(800, 22px);
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          color: #353334;
+          margin-top: 33px;
+        }
+
+        // Div list
+        &-list {
+          width: 109%;
+          margin-left: -20px;
+          display: flex;
+          justify-content: space-between;
+          &-item {
+            @include custom-flex-direction(column);
+            align-items: center;
+            &-icon {
+              @include custom-width-height(135px, 135px);
+              margin-top: 20px;
+              border-radius: 50%;
+              border: 2px solid #bc8544;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              i {
+                color: #bc8544;
+                font-size: 75px;
+              }
+            }
+            &-line {
+              @include custom-font-weight-size(2px, 34px);
+              margin-top: 14px;
+              background-color: #bc8544;
+            }
+            h4 {
+              font-size: 13px;
+              margin-top: 20px;
+              letter-spacing: 0.5px;
+            }
+            p {
+              letter-spacing: 0.5px;
+              margin-top: 5px;
+              font-size: 10px;
+              color: #646464;
+            }
+          }
+        }
+        // Kết thúc div list
       }
-      p:nth-child(4) {
-        margin-top: 5px;
-      }
+      // Kết thúc div specialties
     }
     // Kết thúc div left của content
 
@@ -258,13 +378,355 @@ body {
       position: relative;
       border-radius: 3px;
       border: 2px solid #f0f0f0;
+      font-family: "Raleway", sans-serif;
       padding: {
         left: 42px;
         right: 42px;
         bottom: 38px;
       }
+
+      // space
+      &-space {
+        height: 15px;
+      }
+      // kết thúc space
+
+      // Một phần item của -right
+      &-list-item {
+        position: relative;
+        h4 {
+          @include custom-font-weight-size(800, 22px);
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          color: #353334;
+          margin-top: 33px;
+        }
+        &-line {
+          @include custom-width-height(245px, 2px);
+          position: relative;
+          left: -42px;
+          background-color: #f0f0f0;
+          margin: 20px 0px;
+        }
+
+        // item
+        &-item {
+          display: flex;
+
+          // icon
+          &-list-icon {
+            @include custom-flex-direction(column);
+            align-items: center;
+            &-icon-oval {
+              @include custom-width-height(8px, 8px);
+              margin-top: 6px;
+              border-radius: 50%;
+              background-color: #bc8544;
+            }
+            &-icon-rectangle {
+              @include custom-width-height(2px, 45px);
+              margin-top: 8px;
+              background-color: #bbbbbb;
+            }
+          }
+          // Kết thúc icon
+
+          // nội dung
+          &-content {
+            margin-left: 14px;
+            &-h4 {
+              @include custom-font-weight-size(800, 14px);
+              letter-spacing: 1px;
+            }
+            &-description-1 {
+              @include custom-font-weight-size(600, 11.5px);
+              letter-spacing: 0.7px;
+              margin-top: 3px;
+            }
+            &-description-2 {
+              letter-spacing: 0.7px;
+              font: {
+                size: 12px;
+                style: italic;
+              }
+              color: #aaaaac;
+              margin-top: 3px;
+            }
+          }
+          // kết thúc nội dung
+        }
+        // Kết thúc item
+      }
+      // Kết thúc một phần item của -right
     }
     // Kết thúc div right của content
   }
-  // Kết thúc contetn của cv
+  // Kết thúc content của cv
+
+  // Skill của cv
+  .skill {
+    position: relative;
+    border-radius: 3px;
+    border: 2px solid #f0f0f0;
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    padding: {
+      left: 42px;
+      right: 42px;
+      bottom: 38px;
+    }
+    margin: {
+      left: 53px;
+      right: 53px;
+      top: 9px;
+    }
+
+    // my skill
+    &-mySkill {
+      position: relative;
+      width: 50%;
+      h4 {
+        @include custom-font-weight-size(800, 22px);
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: #353334;
+        margin-top: 33px;
+      }
+      &-list {
+        position: relative;
+        display: flex;
+        &-item {
+          position: relative;
+          display: flex;
+          &-left {
+            position: relative;
+            &-boLder {
+              width: 31px;
+              border: {
+                top: 2px solid #f0f0f0;
+                bottom: 2px solid #f0f0f0;
+                left: 2px solid #f0f0f0;
+              }
+              height: 353px;
+              margin-top: 21px;
+            }
+            p {
+              position: absolute;
+              width: 306px;
+              text-align: center;
+              top: 191px;
+              background: white;
+              left: -152px;
+              font-size: 11px;
+              letter-spacing: 2px;
+              transform: rotate(270deg);
+              font-weight: 600;
+              color: #bc8544;
+            }
+          }
+          &-right {
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            justify-content: space-around;
+            margin-left: 20px;
+            p {
+              color: #646464;
+              font-weight: 600;
+              font-size: 13px;
+            }
+          }
+        }
+        &-item:nth-child(2) {
+          margin-left: 50px;
+          .skill2 {
+            width: 234px;
+            top: 190px;
+            left: -115px;
+          }
+        }
+      }
+    }
+    // Kết thúc my skill
+
+    // ngôn ngữ lập trình
+    &-pl {
+      width: 45%;
+      margin-left: 42px;
+      h4 {
+        @include custom-font-weight-size(800, 22px);
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: #353334;
+        margin-top: 33px;
+      }
+      &-list {
+        margin-left: -11px;
+        &-item {
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          &-icon {
+            border-radius: 5px;
+            border: 2px solid #353334;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            i {
+              margin-left: 10px;
+              margin-top: 3px;
+              font-size: 25px;
+              color: #353334;
+            }
+          }
+          p {
+            font-family: "Raleway", sans-serif;
+            margin-left: 25px;
+            font-weight: 800;
+            width: 140px;
+            letter-spacing: 1.5px;
+          }
+          &-list {
+            width: 230px;
+            justify-content: space-between;
+            display: flex;
+            .skill-level {
+              width: 11px;
+              height: 11px;
+              border-radius: 50%;
+              background-color: #dedee0;
+            }
+            .enable {
+              background-color: #bc8544;
+            }
+          }
+        }
+      }
+    }
+    // Kết thúc ngôn ngữ lập trình
+  }
+  // Kết thúc skill của cv
+
+  // Yêu thích
+  .hobbies {
+    position: relative;
+    border-radius: 3px;
+    border: 2px solid #f0f0f0;
+    font-family: "Raleway", sans-serif;
+    padding: {
+      left: 42px;
+      right: 42px;
+      bottom: 15px;
+    }
+    margin: {
+      left: 53px;
+      right: 53px;
+      top: 9px;
+    }
+    h4 {
+      @include custom-font-weight-size(800, 22px);
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #353334;
+      margin-top: 16px;
+    }
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 104%;
+      margin-left: -19px;
+      &-item {
+        border-radius: 50%;
+        width: 91px;
+        height: 91px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #bc8544;
+        i {
+          font-size: 50px;
+          color: #353334;
+        }
+        p {
+          color: #353334;
+          font-weight: 700;
+          font-size: 10px;
+          margin-top: 5px;
+        }
+      }
+      &-event {
+        position: relative;
+        border: 2px solid #bc8544;
+        width: 160px;
+        border-radius: 50%;
+        height: 160px;
+        font-weight: 700;
+        color: #353334;
+        p {
+          font-size: 11px;
+        }
+        .r {
+          position: absolute;
+          left: 66px;
+          width: 103px;
+          padding-left: 10px;
+          z-index: 1;
+          height: 80px;
+          top: -7px;
+          background: white;
+        }
+        .v2 {
+          position: absolute;
+          width: 130px;
+          height: 130px;
+          top: 13px;
+          border-radius: 50%;
+          border: 2px solid #bc8544;
+          left: 13px;
+          z-index: 2;
+        }
+        .w {
+          position: absolute;
+          left: 66px;
+          width: 75px;
+          padding-left: 8px;
+          z-index: 2;
+          height: 95px;
+          top: 8px;
+          background: white;
+        }
+        .v3 {
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          top: 27px;
+          border-radius: 50%;
+          border: 2px solid #bc8544;
+          left: 28px;
+          z-index: 3;
+        }
+        .s {
+          position: absolute;
+          left: 66px;
+          width: 56px;
+          padding-left: 10px;
+          z-index: 3;
+          height: 96px;
+          top: 23px;
+          background: white;
+        }
+        &-list {
+          position: absolute;
+          top: 59px;
+          left: 55px;
+          z-index: 4;
+        }
+      }
+    }
+  }
+  // Kết thúc yêu thích
 }

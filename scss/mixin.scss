@@ -7,7 +7,7 @@
 // Mixin điều chỉnh tham số cho main
 @mixin custom-main($position, $z-index, $margin-top, $margin-left) {
   @include custom-position($position, $z-index);
-  width: 85vw;
+  width: 1161px;
   margin: {
     top: $margin-top;
     left: $margin-left;

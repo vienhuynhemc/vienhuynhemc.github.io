@@ -22,26 +22,75 @@ body {
 .box-shadow-for-main {
   position: absolute;
   z-index: 1;
-  width: 85vw;
+  width: 1161px;
   margin-top: 70px;
-  margin-left: -42.5vw;
+  margin-left: -580.5px;
   box-shadow: 20px 100px 20px 5px #929090;
-  height: 855px;
+  height: 1700px;
   left: 50%;
+}
+
+.box-shadow-left {
+  position: absolute;
+  z-index: 1;
+  width: 634px;
+  height: 151px;
+  background: #949292;
+  top: 1786px;
+  left: 631px;
+  box-shadow: -11px 21px 17px 20px #939191;
+  transform: rotate(2deg);
+}
+
+.box-shadow-right {
+  position: absolute;
+  z-index: 1;
+  width: 602px;
+  height: 151px;
+  background: #949292;
+  top: 1798px;
+  left: 176px;
+  box-shadow: -7px 20px 30px 20px #939191;
+  transform: rotate(-9deg);
+}
+
+.box-shadow-center {
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: #9e9c9c;
+  top: 1925px;
+  left: 1215px;
+  box-shadow: 5px 4px 30px 20px #9e9c9c;
+  transform: rotate(0deg);
 }
 
 .main {
   position: relative;
   z-index: 2;
-  width: 85vw;
+  width: 1161px;
   margin-top: 70px;
   margin-left: auto;
-  box-shadow: inset -4px 0px 20px #bdbdbd91;
   background-color: white;
+  box-shadow: inset -4px 0px 20px #bdbdbd91;
   border-radius: 3px;
   padding-bottom: 48px;
+  overflow: hidden;
   margin-right: auto;
-  margin-bottom: 80px;
+  margin-bottom: 150px;
+}
+
+.main-box-shadow {
+  position: absolute;
+  width: 500px;
+  height: 849px;
+  z-index: 999;
+  border-radius: 50%;
+  background: #c7c7c730;
+  top: 1101px;
+  left: -130px;
+  box-shadow: 0 0 5071px 52px #c1c1c14a;
 }
 
 .main .header {
@@ -106,7 +155,7 @@ body {
   font-weight: 400;
   font-size: 11.3px;
   position: relative;
-  left: 123px;
+  left: 136px;
   margin-top: 3px;
 }
 
@@ -240,9 +289,9 @@ body {
 .main .content {
   padding-top: 13px;
   background-color: white;
-  position: relative;
   display: flex;
   justify-content: space-between;
+  position: relative;
   margin-left: 53px;
   margin-right: 53px;
   margin-top: 14px;
@@ -253,38 +302,116 @@ body {
   font-size: 12.7px;
   width: 41.2%;
   position: relative;
+}
+
+.main .content-left-intro {
   border-radius: 3px;
   border: 2px solid #f0f0f0;
   font-family: "Raleway", sans-serif;
-  color: #aaaaac;
-  line-height: 21px;
+  width: 100%;
   padding-left: 42px;
   padding-right: 42px;
   padding-bottom: 38px;
+  color: #aaaaac;
 }
 
-.main .content-left-icon {
+.main .content-left-intro-icon {
   width: 27px;
   height: 10px;
   position: absolute;
   left: -17px;
   background: white;
-  top: 50px;
+  top: 56px;
   border: 2px solid #bc8544;
 }
 
-.main .content-left img {
+.main .content-left-intro img {
   width: 390px;
   margin-left: -4px;
+  margin-top: 20px;
+}
+
+.main .content-left-intro p {
+  line-height: 21px;
+  letter-spacing: 1px;
+  font-size: 11.5px;
+}
+
+.main .content-left-intro p:nth-child(3) {
+  margin-top: 8px;
+}
+
+.main .content-left-intro p:nth-child(4) {
   margin-top: 14px;
 }
 
-.main .content-left p:nth-child(3) {
-  transform: translateY(-7px);
+.main .content-left-specialties {
+  margin-top: 9px;
+  border-radius: 3px;
+  border: 2px solid #f0f0f0;
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-bottom: 38px;
 }
 
-.main .content-left p:nth-child(4) {
+.main .content-left-specialties h4 {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #353334;
+  margin-top: 33px;
+}
+
+.main .content-left-specialties-list {
+  width: 109%;
+  margin-left: -20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .content-left-specialties-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main .content-left-specialties-list-item-icon {
+  width: 135px;
+  height: 135px;
+  margin-top: 20px;
+  border-radius: 50%;
+  border: 2px solid #bc8544;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .content-left-specialties-list-item-icon i {
+  color: #bc8544;
+  font-size: 75px;
+}
+
+.main .content-left-specialties-list-item-line {
+  font-weight: 2px;
+  font-size: 34px;
+  margin-top: 14px;
+  background-color: #bc8544;
+}
+
+.main .content-left-specialties-list-item h4 {
+  font-size: 13px;
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+}
+
+.main .content-left-specialties-list-item p {
+  letter-spacing: 0.5px;
   margin-top: 5px;
+  font-size: 10px;
+  color: #646464;
 }
 
 .main .content-right {
@@ -292,8 +419,369 @@ body {
   position: relative;
   border-radius: 3px;
   border: 2px solid #f0f0f0;
+  font-family: "Raleway", sans-serif;
   padding-left: 42px;
   padding-right: 42px;
   padding-bottom: 38px;
+}
+
+.main .content-right-space {
+  height: 15px;
+}
+
+.main .content-right-list-item {
+  position: relative;
+}
+
+.main .content-right-list-item h4 {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #353334;
+  margin-top: 33px;
+}
+
+.main .content-right-list-item-line {
+  width: 245px;
+  height: 2px;
+  position: relative;
+  left: -42px;
+  background-color: #f0f0f0;
+  margin: 20px 0px;
+}
+
+.main .content-right-list-item-item {
+  display: flex;
+}
+
+.main .content-right-list-item-item-list-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main .content-right-list-item-item-list-icon-icon-oval {
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background-color: #bc8544;
+}
+
+.main .content-right-list-item-item-list-icon-icon-rectangle {
+  width: 2px;
+  height: 45px;
+  margin-top: 8px;
+  background-color: #bbbbbb;
+}
+
+.main .content-right-list-item-item-content {
+  margin-left: 14px;
+}
+
+.main .content-right-list-item-item-content-h4 {
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.main .content-right-list-item-item-content-description-1 {
+  font-weight: 600;
+  font-size: 11.5px;
+  letter-spacing: 0.7px;
+  margin-top: 3px;
+}
+
+.main .content-right-list-item-item-content-description-2 {
+  letter-spacing: 0.7px;
+  font-size: 12px;
+  font-style: italic;
+  color: #aaaaac;
+  margin-top: 3px;
+}
+
+.main .skill {
+  position: relative;
+  border-radius: 3px;
+  border: 2px solid #f0f0f0;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-bottom: 38px;
+  margin-left: 53px;
+  margin-right: 53px;
+  margin-top: 9px;
+}
+
+.main .skill-mySkill {
+  position: relative;
+  width: 50%;
+}
+
+.main .skill-mySkill h4 {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #353334;
+  margin-top: 33px;
+}
+
+.main .skill-mySkill-list {
+  position: relative;
+  display: flex;
+}
+
+.main .skill-mySkill-list-item {
+  position: relative;
+  display: flex;
+}
+
+.main .skill-mySkill-list-item-left {
+  position: relative;
+}
+
+.main .skill-mySkill-list-item-left-boLder {
+  width: 31px;
+  border-top: 2px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+  border-left: 2px solid #f0f0f0;
+  height: 353px;
+  margin-top: 21px;
+}
+
+.main .skill-mySkill-list-item-left p {
+  position: absolute;
+  width: 306px;
+  text-align: center;
+  top: 191px;
+  background: white;
+  left: -152px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  transform: rotate(270deg);
+  font-weight: 600;
+  color: #bc8544;
+}
+
+.main .skill-mySkill-list-item-right {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: space-around;
+  margin-left: 20px;
+}
+
+.main .skill-mySkill-list-item-right p {
+  color: #646464;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.main .skill-mySkill-list-item:nth-child(2) {
+  margin-left: 50px;
+}
+
+.main .skill-mySkill-list-item:nth-child(2) .skill2 {
+  width: 234px;
+  top: 190px;
+  left: -115px;
+}
+
+.main .skill-pl {
+  width: 45%;
+  margin-left: 42px;
+}
+
+.main .skill-pl h4 {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #353334;
+  margin-top: 33px;
+}
+
+.main .skill-pl-list {
+  margin-left: -11px;
+}
+
+.main .skill-pl-list-item {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.main .skill-pl-list-item-icon {
+  border-radius: 5px;
+  border: 2px solid #353334;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+}
+
+.main .skill-pl-list-item-icon i {
+  margin-left: 10px;
+  margin-top: 3px;
+  font-size: 25px;
+  color: #353334;
+}
+
+.main .skill-pl-list-item p {
+  font-family: "Raleway", sans-serif;
+  margin-left: 25px;
+  font-weight: 800;
+  width: 140px;
+  letter-spacing: 1.5px;
+}
+
+.main .skill-pl-list-item-list {
+  width: 230px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.main .skill-pl-list-item-list .skill-level {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #dedee0;
+}
+
+.main .skill-pl-list-item-list .enable {
+  background-color: #bc8544;
+}
+
+.main .hobbies {
+  position: relative;
+  border-radius: 3px;
+  border: 2px solid #f0f0f0;
+  font-family: "Raleway", sans-serif;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-bottom: 15px;
+  margin-left: 53px;
+  margin-right: 53px;
+  margin-top: 9px;
+}
+
+.main .hobbies h4 {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #353334;
+  margin-top: 16px;
+}
+
+.main .hobbies-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 104%;
+  margin-left: -19px;
+}
+
+.main .hobbies-list-item {
+  border-radius: 50%;
+  width: 91px;
+  height: 91px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #bc8544;
+}
+
+.main .hobbies-list-item i {
+  font-size: 50px;
+  color: #353334;
+}
+
+.main .hobbies-list-item p {
+  color: #353334;
+  font-weight: 700;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.main .hobbies-list-event {
+  position: relative;
+  border: 2px solid #bc8544;
+  width: 160px;
+  border-radius: 50%;
+  height: 160px;
+  font-weight: 700;
+  color: #353334;
+}
+
+.main .hobbies-list-event p {
+  font-size: 11px;
+}
+
+.main .hobbies-list-event .r {
+  position: absolute;
+  left: 66px;
+  width: 103px;
+  padding-left: 10px;
+  z-index: 1;
+  height: 80px;
+  top: -7px;
+  background: white;
+}
+
+.main .hobbies-list-event .v2 {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 13px;
+  border-radius: 50%;
+  border: 2px solid #bc8544;
+  left: 13px;
+  z-index: 2;
+}
+
+.main .hobbies-list-event .w {
+  position: absolute;
+  left: 66px;
+  width: 75px;
+  padding-left: 8px;
+  z-index: 2;
+  height: 95px;
+  top: 8px;
+  background: white;
+}
+
+.main .hobbies-list-event .v3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 27px;
+  border-radius: 50%;
+  border: 2px solid #bc8544;
+  left: 28px;
+  z-index: 3;
+}
+
+.main .hobbies-list-event .s {
+  position: absolute;
+  left: 66px;
+  width: 56px;
+  padding-left: 10px;
+  z-index: 3;
+  height: 96px;
+  top: 23px;
+  background: white;
+}
+
+.main .hobbies-list-event-list {
+  position: absolute;
+  top: 59px;
+  left: 55px;
+  z-index: 4;
 }
 /*# sourceMappingURL=style.css.map */
