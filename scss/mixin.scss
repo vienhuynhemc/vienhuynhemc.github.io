@@ -24,6 +24,84 @@
   }
 }
 
+// Mixin điều chỉnh cho các vòng ở cuối cv
+@mixin ovalEndCv($position, $z-index, $width, $height, $left, $top) {
+  @include custom-position($position, $z-index);
+  @include custom-width-height($width, $height);
+  left: $left;
+  top: $top;
+  border: 2px solid $color-main-cv;
+  border-radius: 50%;
+}
+
+// Mixin điều chỉnh cho các chữ ở trong vòng cuối cv
+@mixin charEndCv(
+  $position,
+  $z-index,
+  $width,
+  $height,
+  $left,
+  $top,
+  $padding-left
+) {
+  @include custom-position($position, $z-index);
+  @include custom-width-height($width, $height);
+  left: $left;
+  top: $top;
+  padding-left: $padding-left;
+  background: $background-color-main;
+}
+
+// mixin điều chỉnh cho các box sha dow làm nổi trang
+@mixin custom-shadow-end-page(
+  $position,
+  $z-index,
+  $width,
+  $height,
+  $backgroundcolor,
+  $top,
+  $left,
+  $ts1,
+  $ts2,
+  $ts3,
+  $ts4,
+  $color,
+  $deg
+) {
+  @include custom-position($position, $z-index);
+  @include custom-width-height($width, $height);
+  background: $backgroundcolor;
+  top: $top;
+  left: $left;
+  box-shadow: $ts1 $ts2 $ts3 $ts4 $color;
+  transform: rotate($deg);
+}
+
+// Mixin điều chỉnh tham số h4 của div intro + education
+@mixin h4-intro-education() {
+  @include custom-font-weight-size(800, 22px);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $color-main-black-cv;
+  margin-top: 33px;
+}
+
+// Mixin điều chỉnh tham số h4 của div skill
+@mixin h4-skill() {
+  @include custom-font-weight-size(800, 22px);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $color-main-black-cv;
+  margin-top: 33px;
+}
+
+// Mixin điều chỉnh tham số cho div skill
+@mixin div-skill($color, $border-r) {
+  position: relative;
+  border: 2px solid $color;
+  border-radius: $border-r;
+}
+
 /////////////////Kết thúc MIXIN CHO ĐỐI TƯỢNG CỤ THỂ///////////////////////
 /**/
 /**/
@@ -55,6 +133,48 @@
 @mixin custom-flex-direction($direction) {
   display: flex;
   flex-direction: $direction;
+}
+
+// Mxin điều chỉnh display flex căn đều
+@mixin custom-flex-algin() {
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin điều chỉnh display flex và căn đều theo align
+@mixin custom-flex-align-only() {
+  display: flex;
+  align-items: center;
+}
+
+// Mxin điều chỉnh display flex và justify
+@mixin custom-flex-jus($space) {
+  display: flex;
+  justify-content: $space;
+}
+
+// Mixin điểu chỉnh tham số postion và left
+@mixin custom-positon-left($position, $left) {
+  position: $position;
+  left: $left;
+}
+
+// Mixin điều chỉnh tham số padding left -right-bottom
+@mixin custom-padding-left-right-bottom($left, $right, $bottom) {
+  padding: {
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+  }
+}
+
+// Mixin điều chỉnh tham số left-right-top
+@mixin custom-margin-left-right-top($left, $right, $top) {
+  margin: {
+    left: $left;
+    right: $right;
+    top: $top;
+  }
 }
 
 /////////////// KẾT THÚC MIXIN  CHO CÁC CẶP THAM SỐ//////////////////////

@@ -37,7 +37,7 @@ body {
   width: 634px;
   height: 151px;
   background: #949292;
-  top: 1786px;
+  top: 1811px;
   left: 631px;
   box-shadow: -11px 21px 17px 20px #939191;
   transform: rotate(2deg);
@@ -49,20 +49,20 @@ body {
   width: 602px;
   height: 151px;
   background: #949292;
-  top: 1798px;
+  top: 1819px;
   left: 176px;
   box-shadow: -7px 20px 30px 20px #939191;
-  transform: rotate(-9deg);
+  transform: rotate(-5deg);
 }
 
 .box-shadow-center {
   position: absolute;
   z-index: 1;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 37px;
   background: #9e9c9c;
-  top: 1925px;
-  left: 1215px;
+  top: 1946px;
+  left: 1213px;
   box-shadow: 5px 4px 30px 20px #9e9c9c;
   transform: rotate(0deg);
 }
@@ -71,7 +71,7 @@ body {
   position: relative;
   z-index: 2;
   width: 1161px;
-  margin-top: 70px;
+  margin-top: 65px;
   margin-left: 94px;
   background-color: white;
   box-shadow: inset -4px 0px 20px #bdbdbd91;
@@ -83,13 +83,13 @@ body {
 }
 
 .main-box-shadow {
-  position: absolute;
   width: 500px;
   height: 849px;
+  position: absolute;
   z-index: 999;
   border-radius: 50%;
   background: #c7c7c730;
-  top: 1101px;
+  top: 1076px;
   left: -130px;
   box-shadow: 0 0 5071px 52px #c1c1c14a;
 }
@@ -147,9 +147,9 @@ body {
 .main .header-first-information-under-avatar h4 {
   font-weight: 400;
   font-size: 18px;
-  letter-spacing: 0.6px;
-  left: 114px;
   position: relative;
+  left: 114px;
+  letter-spacing: 0.6px;
 }
 
 .main .header-first-information-under-avatar p {
@@ -229,13 +229,13 @@ body {
 .main .header-thrice-icons a {
   width: 34px;
   height: 34px;
+  justify-content: center;
+  align-items: center;
   color: #fefefe;
   text-decoration: none;
   border: 2px solid #fefefe;
   border-radius: 3px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 23px;
 }
 
@@ -288,10 +288,10 @@ body {
 }
 
 .main .content {
-  padding-top: 13px;
-  background-color: white;
   display: flex;
   justify-content: space-between;
+  padding-top: 13px;
+  background-color: white;
   position: relative;
   margin-left: 53px;
   margin-right: 53px;
@@ -367,10 +367,10 @@ body {
 }
 
 .main .content-left-specialties-list {
-  width: 109%;
-  margin-left: -20px;
   display: flex;
   justify-content: space-between;
+  width: 109%;
+  margin-left: -20px;
 }
 
 .main .content-left-specialties-list-item {
@@ -382,12 +382,12 @@ body {
 .main .content-left-specialties-list-item-icon {
   width: 135px;
   height: 135px;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
   border-radius: 50%;
   border: 2px solid #bc8544;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .main .content-left-specialties-list-item-icon i {
@@ -396,8 +396,8 @@ body {
 }
 
 .main .content-left-specialties-list-item-line {
-  font-weight: 2px;
-  font-size: 34px;
+  width: 2px;
+  height: 34px;
   margin-top: 14px;
   background-color: #bc8544;
 }
@@ -546,24 +546,24 @@ body {
 
 .main .skill-mySkill-list-item-left-boLder {
   width: 31px;
+  height: 353px;
   border-top: 2px solid #f0f0f0;
   border-bottom: 2px solid #f0f0f0;
   border-left: 2px solid #f0f0f0;
-  height: 353px;
   margin-top: 21px;
 }
 
 .main .skill-mySkill-list-item-left p {
+  font-weight: 600;
+  font-size: 11px;
   position: absolute;
+  left: -152px;
   width: 306px;
   text-align: center;
   top: 191px;
   background: white;
-  left: -152px;
-  font-size: 11px;
   letter-spacing: 2px;
   transform: rotate(270deg);
-  font-weight: 600;
   color: #bc8544;
 }
 
@@ -576,9 +576,9 @@ body {
 }
 
 .main .skill-mySkill-list-item-right p {
-  color: #646464;
   font-weight: 600;
   font-size: 13px;
+  color: #646464;
 }
 
 .main .skill-mySkill-list-item:nth-child(2) {
@@ -610,19 +610,19 @@ body {
 }
 
 .main .skill-pl-list-item {
-  margin-top: 20px;
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 
 .main .skill-pl-list-item-icon {
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   border: 2px solid #353334;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35px;
-  height: 35px;
 }
 
 .main .skill-pl-list-item-icon i {
@@ -641,9 +641,9 @@ body {
 }
 
 .main .skill-pl-list-item-list {
-  width: 230px;
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
+  width: 230px;
 }
 
 .main .skill-pl-list-item-list .skill-level {
@@ -659,12 +659,12 @@ body {
 
 .main .hobbies {
   position: relative;
-  border-radius: 3px;
   border: 2px solid #f0f0f0;
-  font-family: "Raleway", sans-serif;
+  border-radius: 3px;
   padding-left: 42px;
   padding-right: 42px;
   padding-bottom: 15px;
+  font-family: "Raleway", sans-serif;
   margin-left: 53px;
   margin-right: 53px;
   margin-top: 9px;
@@ -681,20 +681,20 @@ body {
 
 .main .hobbies-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 104%;
   margin-left: -19px;
 }
 
 .main .hobbies-list-item {
-  border-radius: 50%;
-  width: 91px;
-  height: 91px;
   display: flex;
   flex-direction: column;
+  width: 91px;
+  height: 91px;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
   border: 2px solid #bc8544;
 }
 
@@ -704,85 +704,82 @@ body {
 }
 
 .main .hobbies-list-item p {
-  color: #353334;
   font-weight: 700;
   font-size: 10px;
+  color: #353334;
   margin-top: 5px;
 }
 
 .main .hobbies-list-event {
-  position: relative;
-  border: 2px solid #bc8544;
   width: 160px;
-  border-radius: 50%;
   height: 160px;
   font-weight: 700;
-  color: #353334;
-}
-
-.main .hobbies-list-event p {
   font-size: 11px;
+  position: relative;
+  border: 2px solid #bc8544;
+  border-radius: 50%;
+  color: #353334;
 }
 
 .main .hobbies-list-event .r {
   position: absolute;
-  left: 66px;
-  width: 103px;
-  padding-left: 10px;
   z-index: 1;
+  width: 103px;
   height: 80px;
+  left: 66px;
   top: -7px;
+  padding-left: 10px;
   background: white;
 }
 
 .main .hobbies-list-event .v2 {
   position: absolute;
+  z-index: 2;
   width: 130px;
   height: 130px;
-  top: 13px;
-  border-radius: 50%;
-  border: 2px solid #bc8544;
   left: 13px;
-  z-index: 2;
+  top: 13px;
+  border: 2px solid #bc8544;
+  border-radius: 50%;
 }
 
 .main .hobbies-list-event .w {
   position: absolute;
-  left: 66px;
-  width: 75px;
-  padding-left: 8px;
   z-index: 2;
+  width: 75px;
   height: 95px;
+  left: 66px;
   top: 8px;
+  padding-left: 8px;
   background: white;
 }
 
 .main .hobbies-list-event .v3 {
   position: absolute;
+  z-index: 3;
   width: 100px;
   height: 100px;
-  top: 27px;
-  border-radius: 50%;
-  border: 2px solid #bc8544;
   left: 28px;
-  z-index: 3;
+  top: 27px;
+  border: 2px solid #bc8544;
+  border-radius: 50%;
 }
 
 .main .hobbies-list-event .s {
   position: absolute;
-  left: 66px;
-  width: 56px;
-  padding-left: 10px;
   z-index: 3;
+  width: 56px;
   height: 96px;
+  left: 66px;
   top: 23px;
+  padding-left: 10px;
   background: white;
 }
 
 .main .hobbies-list-event-list {
   position: absolute;
+  z-index: 4;
   top: 59px;
   left: 55px;
-  z-index: 4;
 }
 /*# sourceMappingURL=style.css.map */

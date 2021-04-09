@@ -1,21 +1,17 @@
 // import file thông số
 @import "configuration";
-
 // import file mixin
 @import "mixin";
-
 // Toàn cục
 * {
   margin: 0;
   padding: 0;
 }
-
 // body
 body {
   width: 1349px;
   background-color: $background-color-body;
 }
-
 // box shadow cho main
 .box-shadow-for-main {
   @include custom-main(absolute, 1, 70px, -580.5px);
@@ -24,42 +20,60 @@ body {
   left: 674px;
 }
 .box-shadow-left {
-  position: absolute;
-  z-index: 1;
-  width: 634px;
-  height: 151px;
-  background: #949292;
-  top: 1786px;
-  left: 631px;
-  box-shadow: -11px 21px 17px 20px #939191;
-  transform: rotate(2deg);
+  @include custom-shadow-end-page(
+    absolute,
+    1,
+    634px,
+    151px,
+    $color-box-shadow-main-left-right,
+    1811px,
+    631px,
+    -11px,
+    21px,
+    17px,
+    20px,
+    $color-box-shadow-main-right,
+    2deg
+  );
 }
 .box-shadow-right {
-  position: absolute;
-  z-index: 1;
-  width: 602px;
-  height: 151px;
-  background: #949292;
-  top: 1798px;
-  left: 176px;
-  box-shadow: -7px 20px 30px 20px #939191;
-  transform: rotate(-9deg);
-}
-.box-shadow-center {
-  position: absolute;
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  background: #9e9c9c;
-  top: 1925px;
-  left: 1215px;
-  box-shadow: 5px 4px 30px 20px #9e9c9c;
-  transform: rotate(0deg);
+  @include custom-shadow-end-page(
+    absolute,
+    1,
+    602px,
+    151px,
+    $color-box-shadow-main-left-right,
+    1819px,
+    176px,
+    -7px,
+    20px,
+    30px,
+    20px,
+    $color-box-shadow-main-right,
+    -5deg
+  );
 }
 
+.box-shadow-center {
+  @include custom-shadow-end-page(
+    absolute,
+    1,
+    44px,
+    37px,
+    $color-box-shadow-center,
+    1946px,
+    1213px,
+    5px,
+    4px,
+    30px,
+    20px,
+    $color-box-shadow-center,
+    0deg
+  );
+}
 // CV
 .main {
-  @include custom-main(relative, 2, 70px, 94px);
+  @include custom-main(relative, 2, 65px, 94px);
   background-color: $background-color-main;
   box-shadow: inset -4px 0px 20px #bdbdbd91;
   border-radius: 3px;
@@ -69,19 +83,15 @@ body {
     right: 94px;
     bottom: 150px;
   }
-
   &-box-shadow {
-    position: absolute;
-    width: 500px;
-    height: 849px;
-    z-index: 999;
+    @include custom-width-height(500px, 849px);
+    @include custom-position(absolute, 999);
     border-radius: 50%;
     background: #c7c7c730;
-    top: 1101px;
+    top: 1076px;
     left: -130px;
     box-shadow: 0 0 5071px 52px #c1c1c14a;
   }
-
   // Header của cv
   .header {
     @include custom-width-height(100%, 266px);
@@ -92,7 +102,6 @@ body {
       top-left-radius: 3px;
       top-right-radius: 3px;
     }
-
     // Hình nền của header
     &-background {
       @include custom-position(absolute, 1);
@@ -106,11 +115,9 @@ body {
       background: $background-color-header;
     }
     // Kết thúc hình nền của header
-
     // Div avatar và tên
     &-first {
       @include custom-position(relative, 3);
-
       // avatar của header
       &-avatar {
         @include custom-width-height(145px, 145px);
@@ -125,7 +132,6 @@ body {
         }
       }
       // Kết thúc avatar của header
-
       // Thông tin dưới avatar của header
       &-information-under-avatar {
         color: $color-header;
@@ -133,21 +139,18 @@ body {
         font-family: "Raleway", sans-serif;
         h4 {
           @include custom-font-weight-size(400, 18px);
+          @include custom-positon-left(relative, 114px);
           letter-spacing: 0.6px;
-          left: 114px;
-          position: relative;
         }
         p {
           @include custom-font-weight-size(400, 11.3px);
-          position: relative;
-          left: 136px;
+          @include custom-positon-left(relative, 136px);
           margin-top: 3px;
         }
       }
       // Kết thúc thông tin dưới avatar của header
     }
     // Kết thúc div avatar và tên
-
     // Div liên hệ trong header
     &-second {
       @include custom-position(relative, 3);
@@ -176,7 +179,6 @@ body {
       }
     }
     // Kết thúc Div liên hệ trong header
-
     // Div mạng xã hội trong header
     &-thrice {
       @include custom-position(relative, 3);
@@ -195,19 +197,17 @@ body {
         justify-content: space-between;
         a {
           @include custom-width-height(34px, 34px);
+          @include custom-flex-algin();
           color: $color-icon-header;
           text-decoration: none;
           border: 2px solid $color-icon-header;
           border-radius: 3px;
           display: flex;
-          justify-content: center;
-          align-items: center;
           font-size: 23px;
         }
       }
     }
     // Kết thúc Div mạng xã hội trong header
-
     // Div kết thúc trong header
     &-four {
       @include custom-position(relative, 3);
@@ -246,45 +246,32 @@ body {
     // Kết thúc Div kết thúc trong header
   }
   // Kết thúc header của cv
-
   // Content của cv
   .content {
+    @include custom-flex-jus(space-between);
     padding-top: 13px;
     background-color: $background-color-main;
-    display: flex;
-    justify-content: space-between;
     position: relative;
-    margin: {
-      left: 53px;
-      right: 53px;
-      top: 14px;
-    }
-
+    @include custom-margin-left-right-top(53px,53px,14px);
     // Div left của content
     &-left {
       @include custom-font-weight-size(600, 12.7px);
       width: 41.2%;
       position: relative;
-
       // div intro của div left
       &-intro {
         border-radius: 3px;
         border: 2px solid #f0f0f0;
         font-family: "Raleway", sans-serif;
         width: 100%;
-        padding: {
-          left: 42px;
-          right: 42px;
-          bottom: 38px;
-        }
+        @include custom-padding-left-right-bottom(42px, 42px, 38px);
         color: #aaaaac;
         &-icon {
           @include custom-width-height(27px, 10px);
-          position: absolute;
-          left: -17px;
+          @include custom-positon-left(absolute, -17px);
           background: white;
           top: 56px;
-          border: 2px solid #bc8544;
+          border: 2px solid $color-main-cv;
         }
         img {
           width: 390px;
@@ -306,7 +293,6 @@ body {
         }
       }
       // Kết thúc div intro của div left
-
       // Div specialties
       &-specialties {
         margin-top: 9px;
@@ -314,45 +300,34 @@ body {
         border: 2px solid #f0f0f0;
         font-family: "Raleway", sans-serif;
         width: 100%;
-        padding: {
-          left: 42px;
-          right: 42px;
-          bottom: 38px;
-        }
+        @include custom-padding-left-right-bottom(42px, 42px, 38px);
         h4 {
-          @include custom-font-weight-size(800, 22px);
-          letter-spacing: 2.5px;
-          text-transform: uppercase;
-          color: #353334;
-          margin-top: 33px;
+          @include h4-intro-education();
         }
-
         // Div list
         &-list {
+          @include custom-flex-jus(space-between);
           width: 109%;
           margin-left: -20px;
-          display: flex;
-          justify-content: space-between;
           &-item {
             @include custom-flex-direction(column);
             align-items: center;
             &-icon {
               @include custom-width-height(135px, 135px);
+              @include custom-flex-algin();
               margin-top: 20px;
               border-radius: 50%;
-              border: 2px solid #bc8544;
+              border: 2px solid $color-main-cv;
               display: flex;
-              justify-content: center;
-              align-items: center;
               i {
-                color: #bc8544;
+                color: $color-main-cv;
                 font-size: 75px;
               }
             }
             &-line {
-              @include custom-font-weight-size(2px, 34px);
+              @include custom-width-height(2px, 34px);
               margin-top: 14px;
-              background-color: #bc8544;
+              background-color: $color-main-cv;
             }
             h4 {
               font-size: 13px;
@@ -372,7 +347,6 @@ body {
       // Kết thúc div specialties
     }
     // Kết thúc div left của content
-
     // Div right của content
     &-right {
       width: 41.2%;
@@ -380,40 +354,27 @@ body {
       border-radius: 3px;
       border: 2px solid #f0f0f0;
       font-family: "Raleway", sans-serif;
-      padding: {
-        left: 42px;
-        right: 42px;
-        bottom: 38px;
-      }
-
+      @include custom-padding-left-right-bottom(42px, 42px, 38px);
       // space
       &-space {
         height: 15px;
       }
       // kết thúc space
-
       // Một phần item của -right
       &-list-item {
         position: relative;
         h4 {
-          @include custom-font-weight-size(800, 22px);
-          letter-spacing: 2.5px;
-          text-transform: uppercase;
-          color: #353334;
-          margin-top: 33px;
+          @include h4-intro-education();
         }
         &-line {
           @include custom-width-height(245px, 2px);
-          position: relative;
-          left: -42px;
+          @include custom-positon-left(relative, -42px);
           background-color: #f0f0f0;
           margin: 20px 0px;
         }
-
         // item
         &-item {
           display: flex;
-
           // icon
           &-list-icon {
             @include custom-flex-direction(column);
@@ -422,7 +383,7 @@ body {
               @include custom-width-height(8px, 8px);
               margin-top: 6px;
               border-radius: 50%;
-              background-color: #bc8544;
+              background-color: $color-main-cv;
             }
             &-icon-rectangle {
               @include custom-width-height(2px, 45px);
@@ -431,7 +392,6 @@ body {
             }
           }
           // Kết thúc icon
-
           // nội dung
           &-content {
             margin-left: 14px;
@@ -463,7 +423,6 @@ body {
     // Kết thúc div right của content
   }
   // Kết thúc content của cv
-
   // Skill của cv
   .skill {
     position: relative;
@@ -471,27 +430,14 @@ body {
     border: 2px solid #f0f0f0;
     font-family: "Raleway", sans-serif;
     display: flex;
-    padding: {
-      left: 42px;
-      right: 42px;
-      bottom: 38px;
-    }
-    margin: {
-      left: 53px;
-      right: 53px;
-      top: 9px;
-    }
-
+    @include custom-padding-left-right-bottom(42px, 42px, 38px);
+    @include custom-margin-left-right-top(53px,53px,9px);
     // my skill
     &-mySkill {
       position: relative;
       width: 50%;
       h4 {
-        @include custom-font-weight-size(800, 22px);
-        letter-spacing: 2.5px;
-        text-transform: uppercase;
-        color: #353334;
-        margin-top: 33px;
+        @include h4-skill();
       }
       &-list {
         position: relative;
@@ -502,39 +448,34 @@ body {
           &-left {
             position: relative;
             &-boLder {
-              width: 31px;
+              @include custom-width-height(31px, 353px);
               border: {
                 top: 2px solid #f0f0f0;
                 bottom: 2px solid #f0f0f0;
                 left: 2px solid #f0f0f0;
               }
-              height: 353px;
               margin-top: 21px;
             }
             p {
-              position: absolute;
+              @include custom-font-weight-size(600, 11px);
+              @include custom-positon-left(absolute, -152px);
               width: 306px;
               text-align: center;
               top: 191px;
               background: white;
-              left: -152px;
-              font-size: 11px;
               letter-spacing: 2px;
               transform: rotate(270deg);
-              font-weight: 600;
-              color: #bc8544;
+              color: $color-main-cv;
             }
           }
           &-right {
-            display: flex;
-            flex-direction: column;
+            @include custom-flex-direction(column);
             height: 400px;
             justify-content: space-around;
             margin-left: 20px;
             p {
+              @include custom-font-weight-size(600, 13px);
               color: #646464;
-              font-weight: 600;
-              font-size: 13px;
             }
           }
         }
@@ -549,37 +490,31 @@ body {
       }
     }
     // Kết thúc my skill
-
     // ngôn ngữ lập trình
     &-pl {
       width: 45%;
       margin-left: 42px;
       h4 {
-        @include custom-font-weight-size(800, 22px);
-        letter-spacing: 2.5px;
-        text-transform: uppercase;
-        color: #353334;
-        margin-top: 33px;
+        @include h4-skill();
       }
       &-list {
         margin-left: -11px;
         &-item {
+          @include custom-flex-align-only();
           margin-top: 20px;
-          display: flex;
-          align-items: center;
           &-icon {
+            @include custom-width-height(35px, 35px);
+            @include custom-flex-algin();
             border-radius: 5px;
-            border: 2px solid #353334;
+            border: 2px solid $color-main-black-cv;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 35px;
-            height: 35px;
             i {
-              margin-left: 10px;
-              margin-top: 3px;
+              margin: {
+                left: 10px;
+                top: 3px;
+              }
               font-size: 25px;
-              color: #353334;
+              color: $color-main-black-cv;
             }
           }
           p {
@@ -590,17 +525,15 @@ body {
             letter-spacing: 1.5px;
           }
           &-list {
+            @include custom-flex-jus(space-between);
             width: 230px;
-            justify-content: space-between;
-            display: flex;
             .skill-level {
-              width: 11px;
-              height: 11px;
+              @include custom-width-height(11px, 11px);
               border-radius: 50%;
               background-color: #dedee0;
             }
             .enable {
-              background-color: #bc8544;
+              background-color: $color-main-cv;
             }
           }
         }
@@ -609,122 +542,64 @@ body {
     // Kết thúc ngôn ngữ lập trình
   }
   // Kết thúc skill của cv
-
   // Yêu thích
   .hobbies {
-    position: relative;
-    border-radius: 3px;
-    border: 2px solid #f0f0f0;
+    @include div-skill(#f0f0f0, 3px);
+    @include custom-padding-left-right-bottom(42px, 42px, 15px);
     font-family: "Raleway", sans-serif;
-    padding: {
-      left: 42px;
-      right: 42px;
-      bottom: 15px;
-    }
-    margin: {
-      left: 53px;
-      right: 53px;
-      top: 9px;
-    }
+    @include custom-margin-left-right-top(53px,53px,9px);
     h4 {
       @include custom-font-weight-size(800, 22px);
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: #353334;
+      color: $color-main-black-cv;
       margin-top: 16px;
     }
     &-list {
-      display: flex;
+      @include custom-flex-align-only();
       justify-content: space-between;
-      align-items: center;
       width: 104%;
       margin-left: -19px;
       &-item {
+        @include custom-flex-direction(column);
+        @include custom-width-height(91px, 91px);
+        @include custom-flex-algin();
         border-radius: 50%;
-        width: 91px;
-        height: 91px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid #bc8544;
+        border: 2px solid $color-main-cv;
         i {
           font-size: 50px;
-          color: #353334;
+          color: $color-main-black-cv;
         }
         p {
-          color: #353334;
-          font-weight: 700;
-          font-size: 10px;
+          @include custom-font-weight-size(700, 10px);
+          color: $color-main-black-cv;
           margin-top: 5px;
         }
       }
       &-event {
-        position: relative;
-        border: 2px solid #bc8544;
-        width: 160px;
-        border-radius: 50%;
-        height: 160px;
-        font-weight: 700;
-        color: #353334;
-        p {
-          font-size: 11px;
-        }
+        @include custom-width-height(160px, 160px);
+        @include custom-font-weight-size(700, 11px);
+        @include div-skill($color-main-cv, 50%);
+        color: $color-main-black-cv;
         .r {
-          position: absolute;
-          left: 66px;
-          width: 103px;
-          padding-left: 10px;
-          z-index: 1;
-          height: 80px;
-          top: -7px;
-          background: white;
+          @include charEndCv(absolute, 1, 103px, 80px, 66px, -7px, 10px);
         }
         .v2 {
-          position: absolute;
-          width: 130px;
-          height: 130px;
-          top: 13px;
-          border-radius: 50%;
-          border: 2px solid #bc8544;
-          left: 13px;
-          z-index: 2;
+          @include ovalEndCv(absolute, 2, 130px, 130px, 13px, 13px);
         }
         .w {
-          position: absolute;
-          left: 66px;
-          width: 75px;
-          padding-left: 8px;
-          z-index: 2;
-          height: 95px;
-          top: 8px;
-          background: white;
+          @include charEndCv(absolute, 2, 75px, 95px, 66px, 8px, 8px);
         }
         .v3 {
-          position: absolute;
-          width: 100px;
-          height: 100px;
-          top: 27px;
-          border-radius: 50%;
-          border: 2px solid #bc8544;
-          left: 28px;
-          z-index: 3;
+          @include ovalEndCv(absolute, 3, 100px, 100px, 28px, 27px);
         }
         .s {
-          position: absolute;
-          left: 66px;
-          width: 56px;
-          padding-left: 10px;
-          z-index: 3;
-          height: 96px;
-          top: 23px;
-          background: white;
+          @include charEndCv(absolute, 3, 56px, 96px, 66px, 23px, 10px);
         }
         &-list {
-          position: absolute;
+          @include custom-position(absolute, 4);
           top: 59px;
           left: 55px;
-          z-index: 4;
         }
       }
     }
