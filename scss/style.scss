@@ -203,7 +203,8 @@ body {
           border: 2px solid $color-icon-header;
           border-radius: 3px;
           display: flex;
-          font-size: 23px;
+          font-size: 22px;
+          text-decoration: none;
         }
       }
     }
@@ -567,13 +568,14 @@ body {
         border-radius: 50%;
         border: 2px solid $color-main-cv;
         i {
-          font-size: 50px;
+          font-size: 35px;
           color: $color-main-black-cv;
         }
         p {
           @include custom-font-weight-size(700, 10px);
           color: $color-main-black-cv;
-          margin-top: 5px;
+          margin-top: 10px;
+          letter-spacing: 1px;
         }
       }
       &-event {

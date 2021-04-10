@@ -236,7 +236,8 @@ body {
   border: 2px solid #fefefe;
   border-radius: 3px;
   display: flex;
-  font-size: 23px;
+  font-size: 22px;
+  text-decoration: none;
 }
 
 .main .header-four {
@@ -699,7 +700,7 @@ body {
 }
 
 .main .hobbies-list-item i {
-  font-size: 50px;
+  font-size: 35px;
   color: #353334;
 }
 
@@ -707,7 +708,8 @@ body {
   font-weight: 700;
   font-size: 10px;
   color: #353334;
-  margin-top: 5px;
+  margin-top: 10px;
+  letter-spacing: 1px;
 }
 
 .main .hobbies-list-event {
