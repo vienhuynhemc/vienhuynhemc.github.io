@@ -1,8 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #main_canvas {
   display: none;
 }
 
 #startScreen {
+  margin-top: 15px;
+  margin-left: 15px;
   width: 1000px;
   height: 610px;
   background-color: red;
@@ -36,18 +43,18 @@
 
 #startScreen .lottie_2_box_shadow {
   position: absolute;
-  width: 130px;
-  height: 130px;
+  width: 125px;
+  height: 125px;
   z-index: 1;
-  top: 240px;
+  top: 245px;
   left: 433px;
   border-radius: 50%;
-  box-shadow: 17px 20px 18px 6px #cf8c1ab3;
+  box-shadow: 17px 20px 18px 6px #cf8c1a5e;
 }
 
 #startScreen .lottie_2_name {
   cursor: pointer;
-  top: 313px;
+  top: 336px;
   left: 473px;
   font-weight: bold;
   position: absolute;
@@ -62,33 +69,32 @@
 #startScreen .lottie_3 {
   cursor: pointer;
   position: relative;
-  top: 203px;
-  left: 436px;
+  top: 104px;
+  left: 642px;
   z-index: 2;
 }
 
 #startScreen .lottie_3_box_shadow {
   position: absolute;
-  width: 88px;
-  height: 87px;
+  width: 223px;
+  height: 213px;
   z-index: 1;
-  top: 416px;
-  left: 447px;
+  top: 366px;
+  left: 687px;
   border-radius: 50%;
-  box-shadow: 17px 20px 18px 6px #cf8c1ab3;
+  box-shadow: 17px 20px 18px 6px #cf8c1a5e;
 }
 
 #startScreen .lottie_3_name {
   cursor: pointer;
-  top: 443px;
-  left: 479px;
-  transform: rotate(90deg);
+  top: 351px;
+  left: 752px;
   font-weight: bold;
   position: absolute;
   z-index: 3;
   color: white;
   font-family: sans-serif;
-  font-size: 12px;
+  font-size: 17px;
   letter-spacing: 1px;
   transition: all 1s ease;
 }
