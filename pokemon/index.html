@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <!-- Link css -->
+    <link rel="stylesheet" href="./scss/style.css">
+    <!--------------->
+    <!-- Link javascript -->
+    <!-- Thêm defer để nó chạy xong html mới chạy js này-->
+    <script src="./js/gameWorld.js" defer type="module"></script>
+    <!--------------------->
+    <!-- Js chạy file json hiệu ứng -->
+    <script src="./js/lottie-player.js" defer></script>
+    <!------------------------------->
+</head>
+
+<body>
+    <!-- Màn hình bắt đầu game -->
+    <div id="startScreen">
+
+        <!-- Lottie 1 -->
+        <lottie-player src="./json/logoAnimal.json" speed="1" style="width: 300px; height: 300px;" loop autoplay
+            class="lottie_1"></lottie-player>
+
+        <!-- Lottie 2 - Start game -->
+        <lottie-player src="./json/buttonStart.json" background="transparent" speed="1"
+            style="width: 200px; height: 200px;" loop autoplay class="lottie_2"></lottie-player>
+        <div class="lottie_2_box_shadow"></div>
+        <p class="lottie_2_name">Chơi</p>
+
+        <!-- Lottie 3 - Hướng dẫn -->
+        <lottie-player src="./json/buttonGuide.json" background="transparent" speed="1"
+            style="width: 120px; height: 120px;" loop autoplay class="lottie_3"></lottie-player>
+        <div class="lottie_3_box_shadow"></div>
+        <p class="lottie_3_name">Hướng dẫn</p>
+
+        <!-- Logo -->
+        <img src="./img/logo.png" alt="" class="logo">
+
+    </div>
+    <!--------------------------->
+
+    <!-- Main canvas, nơi vẽ chính của game -->
+    <canvas id="main_canvas"></canvas>
+    <!---------------------------------------->
+</body>
+
+</html>

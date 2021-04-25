@@ -1,0 +1,95 @@
+#main_canvas {
+  display: none;
+}
+
+#startScreen {
+  width: 1000px;
+  height: 610px;
+  background-color: red;
+  position: relative;
+  background-image: url("../img/forest_1.jpg");
+  background-position-y: -130px;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+#startScreen .lottie_1 {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+
+#startScreen .logo {
+  position: absolute;
+  left: 50px;
+  width: 500px;
+  top: 40px;
+}
+
+#startScreen .lottie_2 {
+  cursor: pointer;
+  position: relative;
+  top: 200px;
+  left: 400px;
+  z-index: 2;
+}
+
+#startScreen .lottie_2_box_shadow {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  z-index: 1;
+  top: 240px;
+  left: 433px;
+  border-radius: 50%;
+  box-shadow: 17px 20px 18px 6px #cf8c1ab3;
+}
+
+#startScreen .lottie_2_name {
+  cursor: pointer;
+  top: 313px;
+  left: 473px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 3;
+  color: white;
+  font-family: sans-serif;
+  font-size: 23px;
+  letter-spacing: 1px;
+  transition: all 1s ease;
+}
+
+#startScreen .lottie_3 {
+  cursor: pointer;
+  position: relative;
+  top: 203px;
+  left: 436px;
+  z-index: 2;
+}
+
+#startScreen .lottie_3_box_shadow {
+  position: absolute;
+  width: 88px;
+  height: 87px;
+  z-index: 1;
+  top: 416px;
+  left: 447px;
+  border-radius: 50%;
+  box-shadow: 17px 20px 18px 6px #cf8c1ab3;
+}
+
+#startScreen .lottie_3_name {
+  cursor: pointer;
+  top: 443px;
+  left: 479px;
+  transform: rotate(90deg);
+  font-weight: bold;
+  position: absolute;
+  z-index: 3;
+  color: white;
+  font-family: sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: all 1s ease;
+}
+/*# sourceMappingURL=style.css.map */
