@@ -1,0 +1,5 @@
+// Mixin thiết lập width - height
+@mixin setting_width_height($width, $height) {
+  width: $width;
+  height: $height;
+}

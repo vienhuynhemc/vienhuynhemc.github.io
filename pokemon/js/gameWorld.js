@@ -59,7 +59,10 @@ function update(currentTime) {
 
 // Hàm vẽ
 function draw(/** @type {CanvasRenderingContext2D} */ paint_main_canvas) {
-    paint_main_canvas.fillStyle = "yellow";
+    // Xóa vũ vẽ mới
+    paint_main_canvas.clearRect(0, 0, configuration.MAIN_WIDTH, configuration.MAIN_HEIGHT)
+    // Vẽ
+    paint_main_canvas.fillStyle = "black";
     paint_main_canvas.fillRect(0, 0, configuration.MAIN_WIDTH, configuration.MAIN_HEIGHT);
 }
 //---------------------------------------
