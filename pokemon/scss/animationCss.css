@@ -1,9 +1,0 @@
-@keyframes waitScreen_white {
-  50% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(1000px);
-  }
-}
-/*# sourceMappingURL=animationCss.css.map */
