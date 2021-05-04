@@ -1,0 +1,37 @@
+// Mixin thiết lập width - height
+@mixin setting_width_height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// Mixin thiết lập position và top left cho một element
+@mixin setting_position_top_left($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
+// Mixin thiết lập duration và type của animation css
+@mixin setting_duration_and_type_animation_css($duration, $type) {
+  animation-duration: $duration;
+  animation-fill-mode: $type;
+}
+
+// Mixin chỉ thiết lập top left cho một element
+@mixin setting_top_left($top, $left) {
+  top: $top;
+  left: $left;
+}
+
+// full combo flex
+@mixin setting_full_flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin thiết lập z-index và position
+@mixin setting_position_and_z_index($position, $z-index) {
+  position: $position;
+  z-index: $z-index;
+}

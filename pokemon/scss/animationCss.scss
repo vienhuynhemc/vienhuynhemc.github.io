@@ -1,0 +1,21 @@
+// WaitScreen chạy lên chạy xuống
+@keyframes waitScreen_white {
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
+}
+
+@keyframes move_top {
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes move_right {
+  100% {
+    transform: translateX(0px);
+  }
+}

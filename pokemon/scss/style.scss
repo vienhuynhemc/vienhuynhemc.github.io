@@ -1,0 +1,529 @@
+//Import-------------------
+@import "./animationCss.scss";
+@import "./mixin.scss";
+//-------------------------
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #bfffdb;
+}
+
+.main {
+  @include setting_width_height(1000px, 610px);
+  border-radius: 10px;
+  margin: auto;
+  margin-top:15px;
+  transform: translateX(15px);
+  box-shadow: 3px 4px 9px 0px black;
+  position: relative;
+  overflow: hidden;
+
+  .waitScreen {
+    @include setting_width_height(100%, 100%);
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      transform: scaleY(1.2) translateY(-30px);
+      width: 100%;
+    }
+
+    &_button {
+      @include setting_width_height(100%, 100%);
+      background: #00000082;
+      position: absolute;
+
+      lottie-player {
+        @include setting_position_top_left(relative, 144px, 363px);
+      }
+
+      p {
+        @include setting_width_height(283px, 73px);
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 29px;
+        color: white;
+        font-family: monospace;
+        @include setting_position_top_left(relative, -42px, 370px);
+        border-radius: 31px;
+        @include setting_full_flex();
+      }
+    }
+  }
+
+  .waitScreen_white {
+    @include setting_width_height(100%, 100%);
+    background: white;
+    @include setting_position_and_z_index(absolute, 99);
+    transition: all 3s ease;
+    top: 0px;
+    transform: translateY(1000px);
+    animation-duration: 6s;
+    @include setting_full_flex();
+  }
+
+  #startScreen {
+    display: none;
+    @include setting_width_height(1000px, 610px);
+
+    background-color: red;
+    position: relative;
+    background-image: url("../img/forest_1.jpg");
+    background-position-y: -130px;
+    background-size: cover;
+
+    .lottie_1 {
+      position: absolute;
+      top: 10px;
+      right: 50px;
+    }
+
+    .logo {
+      @include setting_position_top_left(absolute, 40px, 50px);
+      width: 500px;
+    }
+
+    .lottie_2 {
+      @include setting_position_top_left(relative, 200px, 400px);
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .lottie_2_box_shadow {
+      @include setting_width_height(125px, 125px);
+      @include setting_position_top_left(absolute, 245px, 433px);
+      z-index: 1;
+      border-radius: 50%;
+      box-shadow: 17px 20px 18px 6px #cf8c1a5e;
+    }
+
+    .lottie_2_name {
+      @include setting_position_top_left(absolute, 336px, 473px);
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 3;
+      color: white;
+      font-family: monospace;
+      font-size: 23px;
+      letter-spacing: 1px;
+      transition: all 1s ease;
+    }
+
+    #divHuongDan {
+      transform: translateY(-140px);
+      @include setting_width_height(1000px, 800px);
+      background: #020202;
+      z-index: 99;
+      @include setting_position_top_left(absolute, 0px, 0px);
+      @include setting_full_flex();
+      display: none;
+
+      .che {
+        background: #020202;
+        position: absolute;
+        @include setting_width_height(200px, 200px);
+        top: 0px;
+        right: 50px;
+        z-index: 10;
+      }
+
+      span {
+        @include setting_position_top_left(absolute, 653px, 413px);
+        font-family: monospace;
+        color: white;
+        background: #f5a623;
+        border-radius: 40px;
+        padding: 16px 41px;
+        font-size: 21px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 1px 16px 13px #ffc1075c;
+        @include setting_duration_and_type_animation_css(2s, forwards);
+      }
+    }
+
+    .lottie_3 {
+      @include setting_position_top_left(relative, 104px, 642px);
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .lottie_3_box_shadow {
+      @include setting_width_height(223px, 213px);
+      @include setting_position_top_left(absolute, 366px, 678px);
+      z-index: 1;
+      border-radius: 50%;
+      box-shadow: 17px 20px 18px 6px #cf8c1a5e;
+    }
+
+    .lottie_3_name {
+      @include setting_position_top_left(absolute, 351px, 752px);
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 3;
+      color: white;
+      font-family: monospace;
+      font-size: 17px;
+      letter-spacing: 1px;
+      transition: all 1s ease;
+    }
+
+    .lottie_4 {
+      @include setting_width_height(100px, 100px);
+      @include setting_position_top_left(absolute, 390px, 457px);
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+
+  #screenPlayGame {
+    position: relative;
+    display: none;
+    #main_canvas {
+      position: absolute;
+    }
+
+    .level {
+      @include setting_position_top_left(absolute, 25px, 72px);
+      z-index: 2;
+      font-family: monospace;
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+    }
+
+    .levelIcon {
+      @include setting_width_height(55px, 55px);
+      @include setting_position_top_left(absolute, 7px, 6px);
+      z-index: 2;
+      @include setting_full_flex();
+      border: 3px solid #f5a623;
+      border-radius: 50%;
+      background-color: white;
+      overflow: hidden;
+
+      lottie-player {
+        width: 61px;
+      }
+    }
+
+    .score {
+      @include setting_position_top_left(absolute, 25px, 194px);
+      z-index: 2;
+      font-family: monospace;
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    #time {
+      @include setting_position_top_left(absolute, -68px, 290px);
+      z-index: 2;
+      width: 386px;
+    }
+
+    .time {
+      @include setting_width_height(337px, 28px);
+      @include setting_position_top_left(absolute, 26px, 314px);
+      z-index: 1;
+      border-radius: 50px;
+      background-color: #feffd4;
+    }
+
+    .timeIcon {
+      @include setting_width_height(110px, 110px);
+      @include setting_position_top_left(relative, -16px, 600px);
+      z-index: 2;
+    }
+
+    .refresh {
+      @include setting_width_height(35px, 35px);
+      cursor: pointer;
+      border: 3px solid #f5a623;
+      background: white;
+      @include setting_position_and_z_index(absolute, 2);
+      border-radius: 50%;
+      @include setting_full_flex();
+      top: 20px;
+      right: 241px;
+    }
+
+    .find {
+      @include setting_width_height(35px, 35px);
+      cursor: pointer;
+      border: 3px solid #f5a623;
+      background: white;
+      @include setting_position_and_z_index(absolute, 2);
+      border-radius: 50%;
+      @include setting_full_flex();
+      top: 20px;
+      overflow: hidden;
+      right: 171px;
+
+      lottie-player {
+        @include setting_width_height(160px, 160px);
+      }
+    }
+  }
+
+  .mute {
+    @include setting_width_height(35px, 35px);
+    cursor: pointer;
+    border: 3px solid #f5a623;
+    background: white;
+    @include setting_position_and_z_index(absolute, 2);
+    border-radius: 50%;
+    @include setting_full_flex();
+    top: 20px;
+    overflow: hidden;
+    right: 101px;
+
+    > div {
+      margin: auto;
+    }
+  }
+
+  .pause {
+    @include setting_width_height(35px, 35px);
+    cursor: pointer;
+    border: 3px solid #f5a623;
+    background: white;
+    @include setting_position_and_z_index(absolute, 6);
+    border-radius: 50%;
+    @include setting_full_flex();
+    top: 20px;
+    overflow: hidden;
+    right: 15px;
+
+    > div {
+      @include setting_width_height(45px, 45px);
+    }
+  }
+
+  #countRefresh {
+    @include setting_width_height(25px, 25px);
+    font-family: monospace;
+    @include setting_full_flex();
+    color: white;
+    background: #03a9f4;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    top: 17px;
+    right: 226px;
+    @include setting_position_and_z_index(absolute, 3);
+  }
+
+  #countFind {
+    @include setting_width_height(25px, 25px);
+    font-family: monospace;
+    @include setting_full_flex();
+    color: white;
+    background: #03a9f4;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    top: 17px;
+    right: 156px;
+    @include setting_position_and_z_index(absolute, 3);
+  }
+
+  #pauseScreen {
+    @include setting_width_height(1000px, 610px);
+    display: none;
+    @include setting_position_and_z_index(absolute, 5);
+    background: #101026db;
+    box-shadow: 14px 20px 20px 0px black;
+    top: 0px;
+
+    .lottie-player {
+      width: 400px;
+    }
+  }
+
+  #loseGame {
+    @include setting_width_height(1000px, 610px);
+    background: #101026db;
+    @include setting_position_and_z_index(absolute, 10);
+    top: 0px;
+    @include setting_full_flex();
+    display: none;
+    font-family: monospace;
+    flex-direction: column;
+    color: white;
+
+    h3 {
+      transform: translateX(-1000px);
+      font-size: 87px;
+      @include setting_position_and_z_index(relative, 2);
+      letter-spacing: 3px;
+      margin-top: -440px;
+      font-weight: bold;
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    p {
+      transform: translateX(-1000px);
+      @include setting_position_and_z_index(relative, 2);
+      font-size: 28px;
+      margin-top: 9px;
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    span {
+      transform: translateY(500px);
+      @include setting_position_and_z_index(absolute, 2);
+      background: #f5a623;
+      border-radius: 40px;
+      padding: 16px 41px;
+      font-size: 21px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 1px 16px 13px #ffc1075c;
+      @include setting_duration_and_type_animation_css(2s, forwards);
+    }
+
+    lottie-player {
+      @include setting_position_and_z_index(absolute, 1);
+    }
+  }
+
+  #winScreen {
+    @include setting_width_height(1000px, 610px);
+    top: 0px;
+    display: none;
+    @include setting_position_and_z_index(absolute, 20);
+    background: #101026db;
+
+    .winScreenMain {
+      @include setting_width_height(600px, 400px);
+      @include setting_position_top_left(absolute, 105px, 200px);
+      border-radius: 25px;
+      background: radial-gradient(
+        circle,
+        rgba(61, 126, 214, 0.75) 22%,
+        rgba(1, 17, 40, 0.524247) 77%
+      );
+      overflow: hidden;
+
+      &_bottom {
+        @include setting_width_height(100%, 80px);
+        position: absolute;
+        bottom: 0px;
+        background: radial-gradient(
+          circle,
+          rgba(25, 62, 112, 0.896796218487395) 22%,
+          rgba(1, 17, 40, 0.9248074229691877) 77%
+        );
+      }
+
+      &_line {
+        position: absolute;
+        @include setting_width_height(100%, 5px);
+        bottom: 80px;
+        background: #7698c9;
+      }
+    }
+
+    #iconWin {
+      width: 213px;
+      position: absolute;
+      left: 390px;
+    }
+
+    p {
+      font-family: monospace;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      position: absolute;
+    }
+
+    #winScreenTitleLevel {
+      transform: translateX(-1000px);
+      @include setting_top_left(210px, 300px);
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    #winScreenLevel {
+      transform: translateX(-1000px);
+      @include setting_top_left(210px, 650px);
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    #winScreenTitleScore {
+      transform: translateX(-1000px);
+      @include setting_top_left(250px, 300px);
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    #winScreenScore {
+      transform: translateX(-1000px);
+      @include setting_top_left(250px, 650px);
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    #winScreenTitleTime {
+      transform: translateX(-1000px);
+      @include setting_top_left(290px, 300px);
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    #winScreenTime {
+      transform: translateX(-1000px);
+      @include setting_top_left(290px, 650px);
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    #winScreenTitleRefresh {
+      transform: translateX(-1000px);
+      @include setting_top_left(330px, 300px);
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    #winScreenRefresh {
+      transform: translateX(-1000px);
+      @include setting_top_left(330px, 650px);
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    #winScreenTitleFind {
+      transform: translateX(-1000px);
+      @include setting_top_left(370px, 300px);
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    #winScreenFind {
+      transform: translateX(-1000px);
+      @include setting_top_left(370px, 650px);
+      @include setting_duration_and_type_animation_css(1s, forwards);
+    }
+
+    #winScreenSum {
+      color: #f1ff00;
+      font-size: 35px;
+      @include setting_top_left(443px, 326px);
+    }
+
+    #winScreenButton {
+      @include setting_position_top_left(absolute, 523px, 413px);
+      transform: translateY(500px);
+      font-family: monospace;
+      color: white;
+      background: #f5a623;
+      border-radius: 40px;
+      padding: 16px 41px;
+      font-size: 21px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 1px 16px 13px #ffc1075c;
+      @include setting_duration_and_type_animation_css(2s, forwards);
+    }
+  }
+}

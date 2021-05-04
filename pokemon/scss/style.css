@@ -1,0 +1,668 @@
+@keyframes waitScreen_white {
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
+}
+
+@keyframes move_top {
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes move_right {
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #bfffdb;
+}
+
+.main {
+  width: 1000px;
+  height: 610px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 15px;
+  transform: translateX(15px);
+  box-shadow: 3px 4px 9px 0px black;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .waitScreen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .waitScreen img {
+  position: absolute;
+  transform: scaleY(1.2) translateY(-30px);
+  width: 100%;
+}
+
+.main .waitScreen_button {
+  width: 100%;
+  height: 100%;
+  background: #00000082;
+  position: absolute;
+}
+
+.main .waitScreen_button lottie-player {
+  position: relative;
+  top: 144px;
+  left: 363px;
+}
+
+.main .waitScreen_button p {
+  width: 283px;
+  height: 73px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 29px;
+  color: white;
+  font-family: monospace;
+  position: relative;
+  top: -42px;
+  left: 370px;
+  border-radius: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .waitScreen_white {
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: absolute;
+  z-index: 99;
+  transition: all 3s ease;
+  top: 0px;
+  transform: translateY(1000px);
+  animation-duration: 6s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main #startScreen {
+  display: none;
+  width: 1000px;
+  height: 610px;
+  background-color: red;
+  position: relative;
+  background-image: url("../img/forest_1.jpg");
+  background-position-y: -130px;
+  background-size: cover;
+}
+
+.main #startScreen .lottie_1 {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+
+.main #startScreen .logo {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  width: 500px;
+}
+
+.main #startScreen .lottie_2 {
+  position: relative;
+  top: 200px;
+  left: 400px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.main #startScreen .lottie_2_box_shadow {
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  top: 245px;
+  left: 433px;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: 17px 20px 18px 6px #cf8c1a5e;
+}
+
+.main #startScreen .lottie_2_name {
+  position: absolute;
+  top: 336px;
+  left: 473px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 3;
+  color: white;
+  font-family: monospace;
+  font-size: 23px;
+  letter-spacing: 1px;
+  transition: all 1s ease;
+}
+
+.main #startScreen #divHuongDan {
+  transform: translateY(-140px);
+  width: 1000px;
+  height: 800px;
+  background: #020202;
+  z-index: 99;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.main #startScreen #divHuongDan .che {
+  background: #020202;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0px;
+  right: 50px;
+  z-index: 10;
+}
+
+.main #startScreen #divHuongDan span {
+  position: absolute;
+  top: 653px;
+  left: 413px;
+  font-family: monospace;
+  color: white;
+  background: #f5a623;
+  border-radius: 40px;
+  padding: 16px 41px;
+  font-size: 21px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 1px 16px 13px #ffc1075c;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.main #startScreen .lottie_3 {
+  position: relative;
+  top: 104px;
+  left: 642px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.main #startScreen .lottie_3_box_shadow {
+  width: 223px;
+  height: 213px;
+  position: absolute;
+  top: 366px;
+  left: 678px;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: 17px 20px 18px 6px #cf8c1a5e;
+}
+
+.main #startScreen .lottie_3_name {
+  position: absolute;
+  top: 351px;
+  left: 752px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 3;
+  color: white;
+  font-family: monospace;
+  font-size: 17px;
+  letter-spacing: 1px;
+  transition: all 1s ease;
+}
+
+.main #startScreen .lottie_4 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 390px;
+  left: 457px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.main #screenPlayGame {
+  position: relative;
+  display: none;
+}
+
+.main #screenPlayGame #main_canvas {
+  position: absolute;
+}
+
+.main #screenPlayGame .level {
+  position: absolute;
+  top: 25px;
+  left: 72px;
+  z-index: 2;
+  font-family: monospace;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}
+
+.main #screenPlayGame .levelIcon {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #f5a623;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.main #screenPlayGame .levelIcon lottie-player {
+  width: 61px;
+}
+
+.main #screenPlayGame .score {
+  position: absolute;
+  top: 25px;
+  left: 194px;
+  z-index: 2;
+  font-family: monospace;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.main #screenPlayGame #time {
+  position: absolute;
+  top: -68px;
+  left: 290px;
+  z-index: 2;
+  width: 386px;
+}
+
+.main #screenPlayGame .time {
+  width: 337px;
+  height: 28px;
+  position: absolute;
+  top: 26px;
+  left: 314px;
+  z-index: 1;
+  border-radius: 50px;
+  background-color: #feffd4;
+}
+
+.main #screenPlayGame .timeIcon {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  top: -16px;
+  left: 600px;
+  z-index: 2;
+}
+
+.main #screenPlayGame .refresh {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border: 3px solid #f5a623;
+  background: white;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: 241px;
+}
+
+.main #screenPlayGame .find {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border: 3px solid #f5a623;
+  background: white;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  overflow: hidden;
+  right: 171px;
+}
+
+.main #screenPlayGame .find lottie-player {
+  width: 160px;
+  height: 160px;
+}
+
+.main .mute {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border: 3px solid #f5a623;
+  background: white;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  overflow: hidden;
+  right: 101px;
+}
+
+.main .mute > div {
+  margin: auto;
+}
+
+.main .pause {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border: 3px solid #f5a623;
+  background: white;
+  position: absolute;
+  z-index: 6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  overflow: hidden;
+  right: 15px;
+}
+
+.main .pause > div {
+  width: 45px;
+  height: 45px;
+}
+
+.main #countRefresh {
+  width: 25px;
+  height: 25px;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: #03a9f4;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: bold;
+  top: 17px;
+  right: 226px;
+  position: absolute;
+  z-index: 3;
+}
+
+.main #countFind {
+  width: 25px;
+  height: 25px;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: #03a9f4;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: bold;
+  top: 17px;
+  right: 156px;
+  position: absolute;
+  z-index: 3;
+}
+
+.main #pauseScreen {
+  width: 1000px;
+  height: 610px;
+  display: none;
+  position: absolute;
+  z-index: 5;
+  background: #101026db;
+  box-shadow: 14px 20px 20px 0px black;
+  top: 0px;
+}
+
+.main #pauseScreen .lottie-player {
+  width: 400px;
+}
+
+.main #loseGame {
+  width: 1000px;
+  height: 610px;
+  background: #101026db;
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  font-family: monospace;
+  flex-direction: column;
+  color: white;
+}
+
+.main #loseGame h3 {
+  transform: translateX(-1000px);
+  font-size: 87px;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 3px;
+  margin-top: -440px;
+  font-weight: bold;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #loseGame p {
+  transform: translateX(-1000px);
+  position: relative;
+  z-index: 2;
+  font-size: 28px;
+  margin-top: 9px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #loseGame span {
+  transform: translateY(500px);
+  position: absolute;
+  z-index: 2;
+  background: #f5a623;
+  border-radius: 40px;
+  padding: 16px 41px;
+  font-size: 21px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 1px 16px 13px #ffc1075c;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.main #loseGame lottie-player {
+  position: absolute;
+  z-index: 1;
+}
+
+.main #winScreen {
+  width: 1000px;
+  height: 610px;
+  top: 0px;
+  display: none;
+  position: absolute;
+  z-index: 20;
+  background: #101026db;
+}
+
+.main #winScreen .winScreenMain {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 105px;
+  left: 200px;
+  border-radius: 25px;
+  background: radial-gradient(circle, rgba(61, 126, 214, 0.75) 22%, rgba(1, 17, 40, 0.524247) 77%);
+  overflow: hidden;
+}
+
+.main #winScreen .winScreenMain_bottom {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0px;
+  background: radial-gradient(circle, rgba(25, 62, 112, 0.896796) 22%, rgba(1, 17, 40, 0.924807) 77%);
+}
+
+.main #winScreen .winScreenMain_line {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: 80px;
+  background: #7698c9;
+}
+
+.main #winScreen #iconWin {
+  width: 213px;
+  position: absolute;
+  left: 390px;
+}
+
+.main #winScreen p {
+  font-family: monospace;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+}
+
+.main #winScreen #winScreenTitleLevel {
+  transform: translateX(-1000px);
+  top: 210px;
+  left: 300px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #winScreen #winScreenLevel {
+  transform: translateX(-1000px);
+  top: 210px;
+  left: 650px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #winScreen #winScreenTitleScore {
+  transform: translateX(-1000px);
+  top: 250px;
+  left: 300px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #winScreen #winScreenScore {
+  transform: translateX(-1000px);
+  top: 250px;
+  left: 650px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #winScreen #winScreenTitleTime {
+  transform: translateX(-1000px);
+  top: 290px;
+  left: 300px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #winScreen #winScreenTime {
+  transform: translateX(-1000px);
+  top: 290px;
+  left: 650px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #winScreen #winScreenTitleRefresh {
+  transform: translateX(-1000px);
+  top: 330px;
+  left: 300px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #winScreen #winScreenRefresh {
+  transform: translateX(-1000px);
+  top: 330px;
+  left: 650px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #winScreen #winScreenTitleFind {
+  transform: translateX(-1000px);
+  top: 370px;
+  left: 300px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #winScreen #winScreenFind {
+  transform: translateX(-1000px);
+  top: 370px;
+  left: 650px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.main #winScreen #winScreenSum {
+  color: #f1ff00;
+  font-size: 35px;
+  top: 443px;
+  left: 326px;
+}
+
+.main #winScreen #winScreenButton {
+  position: absolute;
+  top: 523px;
+  left: 413px;
+  transform: translateY(500px);
+  font-family: monospace;
+  color: white;
+  background: #f5a623;
+  border-radius: 40px;
+  padding: 16px 41px;
+  font-size: 21px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 1px 16px 13px #ffc1075c;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+/*# sourceMappingURL=style.css.map */

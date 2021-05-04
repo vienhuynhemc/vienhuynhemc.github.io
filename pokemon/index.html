@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/icon.png">
+    <title>Pokemon</title>
+    <!-- Link css -->
+    <link rel="stylesheet" href="./scss/style.css">
+    <!--------------->
+    <!-- Link javascript -->
+    <!-- Thêm defer để nó chạy xong html mới chạy js này-->
+    <!-- Game world -->
+    <script src="./js/gameWorld.js" defer type="module"></script>
+    <!-- Start game -->
+    <script src="./js/startWorld.js" defer type="module"></script>
+    <!--------------------->
+    <!-- Js chạy file json hiệu ứng -->
+    <script src="./js/lottie/lottie.min.js"></script>
+    <script src="./js/lottie/lottie-player.js" defer></script>
+    <!------------------------------->
+</head>
+
+<body>
+    <div class="main">
+        <!-- Màn hình vô game -->
+        <div class="waitScreen" id="waitScreen">
+            <img src="./img/background_wait.webp" alt="">
+            <div class="waitScreen_button">
+                <lottie-player src="./json/button.json" speed="1" style="width: 300px; height: 300px;" loop autoplay
+                    class="lottie_1">
+                </lottie-player>
+                <p id="waitScreen_button_goto">Tiến vào</p>
+            </div>
+        </div>
+        <!---------------------->
+
+        <!-- Màn hình trắng để chuyển cảnh -->
+        <div class="waitScreen_white" id="waitScreen_white">
+            <lottie-player src="./json/loader.json" speed="1" style="width: 300px; height: 300px;" loop autoplay
+                class="lottie_1"></lottie-player>
+        </div>
+        <!----------------------------------->
+
+        <!-- Màn hình bắt đầu game -->
+        <div id="startScreen">
+
+            <!-- Lottie 1 -->
+            <lottie-player src="./json/logoAnimal.json" speed="1" style="width: 300px; height: 300px;" loop autoplay
+                class="lottie_1"></lottie-player>
+
+            <!-- Lottie 2 - Start game -->
+            <lottie-player src="./json/buttonStart.json" background="transparent" speed="1"
+                style="width: 200px; height: 200px;" loop autoplay class="lottie_2" id="lottie_2"></lottie-player>
+            <div class="lottie_2_box_shadow"></div>
+            <p class="lottie_2_name" id="lottie_2_name">Chơi</p>
+
+            <!-- Lottie 3 - Hướng dẫn -->
+            <lottie-player src="./json/buttonGuide.json" background="transparent" speed="1"
+                style="width: 300px; height: 300px;" loop autoplay class="lottie_3" id="lottie_huong_dan" ></lottie-player>
+            <div class="lottie_3_box_shadow"></div>
+            <p class="lottie_3_name" id="huong_dan">Hướng dẫn</p>
+            <div id="divHuongDan">
+                <video id="divHuongDanVideo" src="./img/intro.mp4"></video>
+                <div class="che"></div>
+                <span id="divHuongDanButton">Hiểu rồi</span>
+            </div>
+
+            <!-- Lottie 4 - Bật/Tắt âm thanh-->
+            <div class="lottie_4" id="lottie_4"></div>
+
+            <!-- Logo -->
+            <img src="./img/logo.png" alt="" class="logo">
+
+        </div>
+        <!--------------------------->
+
+        <!-- Main canvas, nơi vẽ chính của game -->
+        <div id="screenPlayGame">
+            <!-- Nơi vẽ -->
+            <canvas id="main_canvas"></canvas>
+
+            <!-- Level -->
+            <p class="level" id="level"></p>
+            <div class="levelIcon" id="levelIcon">
+                <lottie-player src="./json/iconLevel.json" speed="1" loop autoplay></lottie-player>
+            </div>
+
+            <!-- Điểm -->
+            <p class="score" id="score"></p>
+
+            <!-- Thời gian | Max frame 500-->
+            <div id="time"></div>
+            <div class="time"></div>
+            <lottie-player src="./json/pikachu.json" speed="1" loop autoplay class="timeIcon"></lottie-player>
+
+            <!-- Nút refresh lại mảng -->
+            <div class="refresh" id="refresh">
+                <lottie-player src="./json/refresh.json" speed="1" loop autoplay></lottie-player>
+            </div>
+            <p id="countRefresh"></p>
+
+            <!-- Nút tìm kiếm -->
+            <div class="find" id="find">
+                <lottie-player src="./json/find.json" speed="1" loop autoplay></lottie-player>
+            </div>
+            <p id="countFind"></p>
+
+            <!-- Nút bậc tắt âm thanh -->
+            <div class="mute" id="mute">
+                <div></div>
+            </div>
+
+            <!-- Nút pause and start -->
+            <div class="pause" id="pause">
+                <div></div>
+            </div>
+
+            <!-- Màn hình pause -->
+            <div id="pauseScreen">
+                <lottie-player src="./json/pauseBird.json" speed="1" loop autoplay></lottie-player>
+            </div>
+
+            <!-- Màn hình win màn  -->
+            <div id="winScreen">
+                <div class="winScreenMain">
+                    <div class="winScreenMain_bottom">
+                    </div>
+                    <div class="winScreenMain_line">
+                    </div>
+                </div>
+                <div id="iconWin">
+                </div>
+                <p id="winScreenTitleLevel">Cấp độ:</p>
+                <p id="winScreenLevel">1</p>
+                <p id="winScreenTitleScore">Điểm:</p>
+                <p id="winScreenScore">3068</p>
+                <p id="winScreenTitleTime">Thời gian còn lạix322:</p>
+                <p id="winScreenTime">3220</p>
+                <p id="winScreenTitleRefresh">Item hoán đổix1:</p>
+                <p id="winScreenRefresh">300</p>
+                <p id="winScreenTitleFind">Item tìm giúpx2:</p>
+                <p id="winScreenFind">200</p>
+                <p id="winScreenSum">TỔNG CỘNG:100000</p>
+                <span id="winScreenButton">Tiếp tục</span>
+            </div>
+
+            <!-- Màn hình lose game -->
+            <div id="loseGame">
+                <h3 id="loseGameH3">Thất bại</h3>
+                <p id="loseGameP">Vì bạn đã hết giờ</p>
+                <span id="loseGameButton">Chơi lại</span>
+                <lottie-player src="./json/loseGame.json" speed="1" loop autoplay></lottie-player>
+            </div>
+
+        </div>
+        <!---------------------------------------->
+    </div>
+</body>
+
+</html>
